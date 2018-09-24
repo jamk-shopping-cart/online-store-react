@@ -1,0 +1,19 @@
+{
+  "name": "online-store",
+  "version": "0.0.1",
+  "description": "study project (web programming and visualisation course)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamk-shopping-cart/online-store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamk-shopping-cart/online-store/issues"
+  },
+  "homepage": "https://github.com/jamk-shopping-cart/online-store#readme"
+}
