@@ -11,6 +11,12 @@
     "url": "git+https://github.com/jamk-shopping-cart/online-store.git"
   },
   "author": "",
+  "contributors": [
+    "Leevi Kukkonen",
+    "Aleksi Kuusjärvi",
+    "Jouni Timonen",
+    "Dmitry Sklyarov"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jamk-shopping-cart/online-store/issues"
