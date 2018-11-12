@@ -1,25 +1,36 @@
 {
   "name": "online-store",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "study project (web programming and visualisation course)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jamk-shopping-cart/online-store.git"
   },
-  "author": "",
+  "private": true,
+  "dependencies": {
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-scripts": "2.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "contributors": [
     "Leevi Kukkonen",
     "Aleksi Kuusjärvi",
     "Jouni Timonen",
     "Dmitry Sklyarov"
-  ],
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jamk-shopping-cart/online-store/issues"
-  },
-  "homepage": "https://github.com/jamk-shopping-cart/online-store#readme"
+  ]
 }
