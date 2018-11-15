@@ -9,7 +9,7 @@ class StartPage extends Component {
           <div id="center">Store</div>
         </div>
         <div id="bottom">View Our Collection 2018</div>
-        <button id="button">Forward</button>
+        <button id="button"><i class="fas fa-angle-down"></i></button>
       </div>
     );
   }
