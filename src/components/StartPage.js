@@ -6,10 +6,12 @@ class StartPage extends Component {
     return (
       <div>
         <div id="wrap">
-          <div id="center">Store</div>
+          <div id="center">ShoeFlex</div>
+          <div id="bottom">View Our Collection 2018</div>
+          <button id="button">
+            <i class="fas fa-2x fa-chevron-down" />
+          </button>
         </div>
-        <div id="bottom">View Our Collection 2018</div>
-        <button id="button"><i class="fas fa-angle-down"></i></button>
       </div>
     );
   }
