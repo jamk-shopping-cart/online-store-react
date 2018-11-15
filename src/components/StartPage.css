@@ -1,5 +1,5 @@
 body {
-  background-color: #184568;
+  background-color: #00456B;
 }
 
 #wrap {
@@ -13,11 +13,15 @@ body {
 
 #center {
   text-transform: uppercase;
-  color: orange;
+  color: #FF9628;
   font-size: 32px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
 }
 
 #bottom {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   color: #fff;
   font-size: 24px;
   position: absolute;
@@ -27,6 +31,7 @@ body {
 }
 
 #button {
+  color: white;
   position: absolute;
   bottom: 150px;
   margin-left: -40px;
