@@ -1,5 +1,6 @@
 body {
-  background-color: #00456B;
+  background-color: #00456b;
+  font-size: 100%;
 }
 
 #wrap {
@@ -9,12 +10,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 #center {
-  text-transform: uppercase;
-  color: #FF9628;
-  font-size: 32px;
+  /* text-transform: uppercase; */
+  color: #ff9628;
+  font-size: 3em;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
 }
@@ -23,17 +25,15 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #fff;
-  font-size: 24px;
+  font-size: 1.5em;
   position: absolute;
-  bottom: 200px;
-  margin-left: -140px;
-  left: 50%;
+  bottom: 20%;
+  /* margin-left: -140px;
+  left: 50%; */
 }
 
 #button {
   color: white;
   position: absolute;
-  bottom: 150px;
-  margin-left: -40px;
-  left: 50%;
+  bottom: 12%;
 }
