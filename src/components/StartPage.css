@@ -1,5 +1,5 @@
 body {
-  background-color: #184568;
+  background-color: #00456B;
 }
 
 #wrap {
@@ -13,7 +13,7 @@ body {
 
 #center {
   text-transform: uppercase;
-  color: orange;
+  color: #FF9628;
   font-size: 32px;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
