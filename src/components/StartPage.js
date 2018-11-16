@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { /*Route,*/ Link } from './Router';
+import { Link } from './Router';
 import './StartPage.css';
 
 // const Link = props => {
