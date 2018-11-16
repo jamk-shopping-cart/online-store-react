@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './StartPage.css';
 
+const Link = props => {
+  console.log(props);
+  return <a href={props.to}>{props.children}</a>;
+};
+
 class StartPage extends Component {
   render() {
     return (
@@ -8,9 +13,9 @@ class StartPage extends Component {
         <div id="wrap">
           <div id="center">ShoeFlex</div>
           <div id="bottom">View Our Collection 2018</div>
-          <a href="#" id="link">
+          <Link to="#" id="link">
             <i className="fas fa-2x fa-chevron-down" />
-          </a>
+          </Link>
         </div>
       </div>
     );
