@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import RegistrationForm from './RegistrationForm';
 import { Link } from './Router';
 import './StartPage.css';
 
@@ -7,6 +8,14 @@ import './StartPage.css';
 //   return <a href={props.to}>{props.children}</a>;
 // };
 
+class Route extends Component {
+  render() {
+    console.log(this.props);
+    const { component } = this.props;
+    return React.createElement(component);
+  }
+}
+
 class StartPage extends Component {
   render() {
     return (
@@ -14,10 +23,12 @@ class StartPage extends Component {
         <div id="wrap">
           <div id="center">ShoeFlex</div>
           <div id="bottom">View Our Collection 2018</div>
-          <Link to="#" id="link">
+          <Link to="main" id="link">
             <i className="fas fa-2x fa-chevron-down" />
           </Link>
         </div>
+        <Route exact path="/" component={RegistrationForm} />
+        {/* <Route path="/about" render={() => <p>route</p>} /> */}
       </div>
     );
   }
