@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from './Router';
 import './Navigation.css';
 
 class Navigation extends Component {
@@ -6,15 +7,15 @@ class Navigation extends Component {
     return (
       <div>
         <nav className="navbar navbar-light">
-          <a href="#" className="navbar-brand text-warning">
-            <i class="fas fa-user" />
-          </a>
-          <a href="#" className="navbar-brand text-warning">
+          <Link to="reg" className="navbar-brand text-warning">
+            <i className="fas fa-user" />
+          </Link>
+          <Link to="#" className="navbar-brand text-warning">
             ShoeFlex
-          </a>
-          <a href="#" className="navbar-brand text-warning">
+          </Link>
+          <Link to="/" className="navbar-brand text-warning">
             <i className="fas fa-shopping-cart" />
-          </a>
+          </Link>
         </nav>
       </div>
     );
