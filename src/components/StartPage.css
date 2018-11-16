@@ -1,9 +1,5 @@
-body {
-  background-color: #00456b;
-  font-size: 100%;
-}
-
 #wrap {
+  background-color: #00456b;
   width: 100%;
   height: 100%;
   position: fixed;
