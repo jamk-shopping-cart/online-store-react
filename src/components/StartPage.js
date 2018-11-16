@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from './Router';
 import './StartPage.css';
 
-const Link = props => {
-  console.log(props);
-  return <a href={props.to}>{props.children}</a>;
-};
+// const Link = props => {
+//   console.log(props);
+//   return <a href={props.to}>{props.children}</a>;
+// };
 
 class StartPage extends Component {
   render() {
