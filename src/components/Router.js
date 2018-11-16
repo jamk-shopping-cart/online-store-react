@@ -11,15 +11,14 @@ const historyReplace = path => {
 
 export class Link extends Component {
   static propTypes = {
-    // Вариант записи Props в качестве static свойства
     to: PropTypes.string.isRequired,
     replace: PropTypes.bool
   };
   handleClick = event => {
     const { replace, to } = this.props;
-    event.preventDefault(); // блокируем стандартное поведение браузера
+    event.preventDefault();
 
-    replace ? historyReplace(to) : historyPush(to); // вызываем одну из наших функций
+    replace ? historyReplace(to) : historyPush(to);
   };
 
   render() {
