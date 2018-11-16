@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RegistrationForm from './RegistrationForm';
+// import Navigation from './Navigation';
 import { Route, Link } from './Router';
 import './StartPage.css';
 
@@ -33,7 +34,8 @@ class StartPage extends Component {
           </Link>
         </div>
         <Route exact path="/reg" component={RegistrationForm} />
-        <Route path="/route" render={() => <p>route</p>} />
+        {/* <Route exact path="/nav" component={Navigation} /> */}
+        {/* <Route path="/route" render={() => <p>route</p>} /> */}
       </div>
     );
   }
