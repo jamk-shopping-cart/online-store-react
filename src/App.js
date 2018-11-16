@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 import React, { Component } from 'react';
 import { Route } from './components/Router';
 import StartPage from './components/StartPage';
