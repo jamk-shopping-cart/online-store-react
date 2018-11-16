@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Route, Link } from './Router';
 import RegistrationForm from './RegistrationForm';
 // import Navigation from './Navigation';
-import { Route, Link } from './Router';
 import './StartPage.css';
 
 // const Link = props => {
@@ -33,9 +33,6 @@ class StartPage extends Component {
             <i className="fas fa-2x fa-chevron-down" />
           </Link>
         </div>
-        <Route exact path="/reg" component={RegistrationForm} />
-        {/* <Route exact path="/nav" component={Navigation} /> */}
-        {/* <Route path="/route" render={() => <p>route</p>} /> */}
       </div>
     );
   }
