@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RegistrationForm from './RegistrationForm';
-import { Link } from './Router';
+import { Route, Link } from './Router';
 import './StartPage.css';
 
 // const Link = props => {
@@ -8,13 +8,18 @@ import './StartPage.css';
 //   return <a href={props.to}>{props.children}</a>;
 // };
 
-class Route extends Component {
-  render() {
-    console.log(this.props);
-    const { component } = this.props;
-    return React.createElement(component);
-  }
-}
+// class Route extends Component {
+//   render() {
+//     console.log(this.props);
+//     const { component, render } = this.props;
+//     if (component) {
+//       return React.createElement(component);
+//     }
+//     if (render) {
+//       return render();
+//     }
+//   }
+// }
 
 class StartPage extends Component {
   render() {
@@ -23,12 +28,12 @@ class StartPage extends Component {
         <div id="wrap">
           <div id="center">ShoeFlex</div>
           <div id="bottom">View Our Collection 2018</div>
-          <Link to="main" id="link">
+          <Link to="reg" id="link">
             <i className="fas fa-2x fa-chevron-down" />
           </Link>
         </div>
-        <Route exact path="/" component={RegistrationForm} />
-        {/* <Route path="/about" render={() => <p>route</p>} /> */}
+        <Route exact path="/reg" component={RegistrationForm} />
+        <Route path="/route" render={() => <p>route</p>} />
       </div>
     );
   }
