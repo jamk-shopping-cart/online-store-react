@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navigation from './Navigation';
 import { Link } from './Router';
 import './RegistrationForm.css';
 
@@ -6,14 +7,18 @@ class RegistrationForm extends Component {
   render() {
     return (
       <div>
+        <Navigation />
         <form>
-          <input id="username" type="text" placeholder="Username" />
-          <input id="password" type="text" placeholder="Password" />
+          <input id="email" type="email" placeholder="Email" autofocus required />
+          <input id="password" type="password" placeholder="Password" required />
+          <input id="password" type="password" placeholder="Confirm password" required />
+          <input id="name" type="text" placeholder="First Name" required />
+          <input id="surname" type="text" placeholder="Last Name" required />
+          <input id="phone" type="tel" placeholder="Phone" required />
+          <input id="address" type="text" placeholder="Address" required />
+          <input id="post" type="text" placeholder="Post" required />
           <br />
-          <br />
-          <Link to="nav" id="link">
-            to nav
-          </Link>
+          <input type="submit" value="Send" />
         </form>
       </div>
     );

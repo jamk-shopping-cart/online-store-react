@@ -1,0 +1,62 @@
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+input[type='email'],
+input[type='password'],
+input[type='text'],
+input[type='tel'] {
+  outline: none;
+  height: 2em;
+  width: 70%;
+  margin: 0.5em auto;
+}
+
+input[type='submit'] {
+  margin-top: 2em;
+}
+
+#name {
+  margin-top: 2em;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: #b22222;
+}
+
+input:valid:not(:placeholder-shown) {
+  border-color: #008000;
+}
+
+input[list='area']:valid,
+input[list='area']:invalid {
+  border-color: initial;
+}
+
+input[type='submit']:valid,
+input[type='submit']:invalid {
+  border-color: #000;
+}
+
+::-webkit-input-placeholder {
+  color: grey;
+  font-size: 1.1em;
+}
+
+::-moz-placeholder {
+  color: grey;
+  font-size: 1.1em;
+}
+
+:-ms-input-placeholder {
+  color: grey;
+  font-size: 1.1em;
+}
+
+:-moz-placeholder {
+  color: grey;
+  font-size: 1.1;
+}
