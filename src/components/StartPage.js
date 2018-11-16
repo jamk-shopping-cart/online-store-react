@@ -8,9 +8,9 @@ class StartPage extends Component {
         <div id="wrap">
           <div id="center">ShoeFlex</div>
           <div id="bottom">View Our Collection 2018</div>
-          <button id="button">
-            <i class="fas fa-2x fa-chevron-down" />
-          </button>
+          <a href="#" id="link">
+            <i className="fas fa-2x fa-chevron-down" />
+          </a>
         </div>
       </div>
     );
