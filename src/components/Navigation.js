@@ -10,10 +10,10 @@ class Navigation extends Component {
           <Link to="reg" className="navbar-brand text-warning">
             <i className="fas fa-user" />
           </Link>
-          <Link to="#" className="navbar-brand text-warning">
+          <Link to="/" className="navbar-brand text-warning">
             ShoeFlex
           </Link>
-          <Link to="/" className="navbar-brand text-warning">
+          <Link to="cart" className="navbar-brand text-warning">
             <i className="fas fa-shopping-cart" />
           </Link>
         </nav>
