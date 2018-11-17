@@ -13,7 +13,7 @@ class Navigation extends Component {
           <Link to="/" className="navbar-brand text-warning">
             ShoeFlex
           </Link>
-          <Link to="cart" className="navbar-brand text-warning">
+          <Link to="col" className="navbar-brand text-warning">
             <i className="fas fa-shopping-cart" />
           </Link>
         </nav>

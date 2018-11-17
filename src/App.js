@@ -6,6 +6,7 @@ import { Route } from './components/Router';
 import StartPage from './components/StartPage';
 import Navigation from './components/Navigation';
 import RegistrationForm from './components/RegistrationForm';
+import Collection from './components/Collection';
 import './App.css';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
         <Route exact path="/" component={StartPage} />
         <Route exact path="/reg" component={RegistrationForm} />
         <Route exact path="/nav" component={Navigation} />
+        <Route exact path="/col" component={Collection} />
       </div>
     );
   }
