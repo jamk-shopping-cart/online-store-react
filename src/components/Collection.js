@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from './Navigation';
+import ShoesData from './ShoesData';
 import './Collection.css';
 
 class Collection extends Component {
@@ -9,7 +10,7 @@ class Collection extends Component {
         <Navigation />
         <div id="collection">
           <div id="name">2018 Collection</div>
-          <div id="images" />
+          <ShoesData />
         </div>
       </div>
     );
