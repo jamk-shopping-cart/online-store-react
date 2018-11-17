@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Shoes from './Shoes';
 
 class ShoesData extends Component {
   constructor(props) {
@@ -28,9 +29,9 @@ class ShoesData extends Component {
     } else {
       return (
         <ul>
-          {items.map(item => (
+          {items.map((item, index) => (
             <li key={item.id}>
-              {item.model} {item.size}
+              <Shoes key={index} data={item} />
             </li>
           ))}
         </ul>
