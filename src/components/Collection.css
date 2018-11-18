@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-#name {
+#collectionHeader {
   margin-top: 5%;
   color: grey;
   font-size: 3em;

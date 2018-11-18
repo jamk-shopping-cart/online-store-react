@@ -5,7 +5,7 @@ import './RegistrationForm.css';
 class RegistrationForm extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Navigation />
         <form>
           <input id="email" type="email" placeholder="Email" autoFocus required />
@@ -21,7 +21,7 @@ class RegistrationForm extends Component {
           </label>
           <input type="submit" value="Send" />
         </form>
-      </div>
+      </React.Fragment>
     );
   }
 }

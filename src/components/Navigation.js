@@ -5,7 +5,7 @@ import './Navigation.css';
 class Navigation extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <nav className="navbar navbar-light">
           <Link to="reg" className="navbar-brand text-warning">
             <i className="fas fa-user" />
@@ -17,7 +17,7 @@ class Navigation extends Component {
             <i className="fas fa-shopping-cart" />
           </Link>
         </nav>
-      </div>
+      </React.Fragment>
     );
   }
 }

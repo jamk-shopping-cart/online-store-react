@@ -6,13 +6,13 @@ import './Collection.css';
 class Collection extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Navigation />
         <div id="collection">
-          <div id="name">2018 Collection</div>
+          <div id="collectionHeader">2018 Collection</div>
           <ShoesData />
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

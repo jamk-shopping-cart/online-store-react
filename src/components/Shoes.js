@@ -15,8 +15,8 @@ const Shoes = ({ data }) => {
 Shoes.data = {
   data: PropTypes.shape({
     imgUrl: PropTypes.string.isRequired,
-    model: PropTypes.string.isRequired,
-    size: PropTypes.string.isRequired
+    model: PropTypes.string.isRequired
+    // size: PropTypes.string.isRequired
   }).isRequired
 };
 
