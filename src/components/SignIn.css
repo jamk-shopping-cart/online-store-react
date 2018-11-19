@@ -1,0 +1,21 @@
+.top {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: #ff9628;
+  position: absolute;
+  top: 2%;
+  text-align: center;
+}
+
+#si_username,
+#si_password {
+  width: 100%;
+}
+
+p {
+  text-align: center;
+}
+
+.em1 {
+  font-size: 1em;
+}

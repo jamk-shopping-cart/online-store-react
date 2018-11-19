@@ -7,14 +7,14 @@ class Navigation extends Component {
     return (
       <React.Fragment>
         <nav className="navbar navbar-light">
-          <Link to="registration" className="navbar-brand text-warning">
-            <i className="fas fa-user" />
-          </Link>
-          <Link to="/" className="navbar-brand text-warning">
-            ShoeFlex
+          <Link to="signin" className="navbar-brand text-warning">
+            <i className="fas fa-user em2" />
           </Link>
           <Link to="collection" className="navbar-brand text-warning">
-            <i className="fas fa-shopping-cart" />
+            <p className="em2">ShoeFlex</p>
+          </Link>
+          <Link to="/" className="navbar-brand text-warning">
+            <i className="fas fa-shopping-cart em2" />
           </Link>
         </nav>
       </React.Fragment>

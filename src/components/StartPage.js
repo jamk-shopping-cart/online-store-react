@@ -5,12 +5,14 @@ import './StartPage.css';
 class StartPage extends Component {
   render() {
     return (
-      <div id="wrap">
-        <div id="center">ShoeFlex</div>
-        <div id="bottom">
-          <p>View Our Collection 2018</p>
+      <div className="wrap">
+        <div className="center font100">
+          <p className="em3">ShoeFlex</p>
+        </div>
+        <div className="bottom font400">
+          <p className="em15">View Our Collection 2018</p>
           <Link to="collection">
-            <i className="fas fa fa-chevron-down" />
+            <i className="fas fa fa-chevron-down em2" />
           </Link>
         </div>
       </div>

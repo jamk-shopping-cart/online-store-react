@@ -1,4 +1,4 @@
-#wrap {
+.wrap {
   background-color: #00456b;
   width: 100%;
   height: 100%;
@@ -9,19 +9,16 @@
   flex-direction: column;
 }
 
-#center {
+.center {
   /* text-transform: uppercase; */
   color: #ff9628;
-  font-size: 3em;
   font-family: 'Roboto', sans-serif;
-  font-weight: 100;
 }
 
-#bottom {
+.bottom {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #fff;
-  font-size: 1.5em;
   position: absolute;
   bottom: 20%;
   text-align: center;
@@ -29,6 +26,22 @@
   left: 50%; */
 }
 
+.font100 {
+  font-weight: 100;
+}
+
+.font400 {
+  font-weight: 400;
+}
+
 .fa-chevron-down {
   color: white;
+}
+
+.em3 {
+  font-size: 3em;
+}
+
+.em15 {
+  font-size: 1.5em;
 }

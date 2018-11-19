@@ -7,7 +7,7 @@ class RegistrationForm extends Component {
     return (
       <React.Fragment>
         <Navigation />
-        <form>
+        <form id="regForm">
           <input id="email" type="email" placeholder="Email" autoFocus required />
           <input id="password" type="password" placeholder="Password" required />
           <input id="confirm_password" type="password" placeholder="Confirm password" required />

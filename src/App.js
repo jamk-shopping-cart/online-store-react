@@ -8,6 +8,8 @@ import Navigation from './components/Navigation';
 import RegistrationForm from './components/RegistrationForm';
 import Collection from './components/Collection';
 import Product from './components/Product';
+import SignIn from './components/SignIn';
+
 import './App.css';
 
 class App extends Component {
@@ -19,6 +21,7 @@ class App extends Component {
         <Route exact path="/navigation" component={Navigation} />
         <Route exact path="/collection" component={Collection} />
         <Route exact path="/product" component={Product} />
+        <Route exact path="/signin" component={SignIn} />
       </div>
     );
   }
