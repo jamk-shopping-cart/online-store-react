@@ -18,6 +18,7 @@ class App extends Component {
         <Route exact path="/registration" component={RegistrationForm} />
         <Route exact path="/navigation" component={Navigation} />
         <Route exact path="/collection" component={Collection} />
+        <Route exact path="/product" component={Product} />
       </div>
     );
   }
