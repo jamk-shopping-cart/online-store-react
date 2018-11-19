@@ -24,12 +24,11 @@
   font-size: 1.5em;
   position: absolute;
   bottom: 20%;
+  text-align: center;
   /* margin-left: -140px;
   left: 50%; */
 }
 
-#link {
+.fa-chevron-down {
   color: white;
-  position: absolute;
-  bottom: 12%;
 }
