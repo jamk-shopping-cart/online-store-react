@@ -7,13 +7,13 @@ class Navigation extends Component {
     return (
       <React.Fragment>
         <nav className="navbar navbar-light">
-          <Link to="reg" className="navbar-brand text-warning">
+          <Link to="registration" className="navbar-brand text-warning">
             <i className="fas fa-user" />
           </Link>
           <Link to="/" className="navbar-brand text-warning">
             ShoeFlex
           </Link>
-          <Link to="col" className="navbar-brand text-warning">
+          <Link to="collection" className="navbar-brand text-warning">
             <i className="fas fa-shopping-cart" />
           </Link>
         </nav>

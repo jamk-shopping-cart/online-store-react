@@ -9,7 +9,7 @@ class StartPage extends Component {
         <div id="center">ShoeFlex</div>
         <div id="bottom">
           <p>View Our Collection 2018</p>
-          <Link to="col">
+          <Link to="collection">
             <i className="fas fa fa-chevron-down" />
           </Link>
         </div>
