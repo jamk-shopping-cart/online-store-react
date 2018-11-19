@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from './Router';
 import Navigation from './Navigation';
 import './RegistrationForm.css';
 
@@ -7,6 +8,12 @@ class RegistrationForm extends Component {
     return (
       <React.Fragment>
         <Navigation />
+        <div className="left10 top5">
+          <Link to="signin">
+            <i className="fas fa-2x fa-arrow-left grey" />
+          </Link>
+        </div>
+        <p className="em2">Registration</p>
         <form id="regForm">
           <input id="email" type="email" placeholder="Email" autoFocus required />
           <input id="password" type="password" placeholder="Password" required />

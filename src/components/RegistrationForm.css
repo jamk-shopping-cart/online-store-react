@@ -23,6 +23,18 @@ input[type='submit'] {
   margin-top: 2em;
 }
 
+.left10 {
+  margin-left: 10%;
+}
+
+.top5 {
+  margin-top: 5%;
+}
+
+.grey {
+  color: grey;
+}
+
 input:invalid:not(:placeholder-shown) {
   border-color: #b22222;
 }

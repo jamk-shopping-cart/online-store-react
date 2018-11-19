@@ -4,6 +4,7 @@ import { Link } from './Router';
 import './Shoes.css';
 
 const Shoes = ({ data }) => {
+  console.log(data);
   return (
     <div className="animated fadeIn delay-1s">
       <Link to="product">
