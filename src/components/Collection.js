@@ -9,7 +9,9 @@ class Collection extends Component {
       <React.Fragment>
         <Navigation />
         <div id="collection">
-          <div id="collectionHeader">2018 Collection</div>
+          <div id="collectionHeader" className="animated pulse">
+            2018 Collection
+          </div>
           <ShoesData />
         </div>
       </React.Fragment>
