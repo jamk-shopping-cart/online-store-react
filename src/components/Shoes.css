@@ -6,6 +6,7 @@ li {
   list-style-type: none;
 }
 
-h3 {
+h4,
+h6 {
   text-align: center;
 }

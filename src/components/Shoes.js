@@ -6,8 +6,8 @@ const Shoes = ({ data }) => {
   return (
     <React.Fragment>
       <img src={data.imgUrl} alt="shoes model" width={300} />
-      <h3>{data.model}</h3>
-      {/* <p>Size {data.size}</p> */}
+      <h4>{data.model}</h4>
+      <h6>{data.price}</h6>
     </React.Fragment>
   );
 };
@@ -15,8 +15,8 @@ const Shoes = ({ data }) => {
 Shoes.data = {
   data: PropTypes.shape({
     imgUrl: PropTypes.string.isRequired,
-    model: PropTypes.string.isRequired
-    // size: PropTypes.string.isRequired
+    model: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired
   }).isRequired
 };
 
