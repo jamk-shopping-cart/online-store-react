@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from './Router';
 import Navigation from './Navigation';
+import DropList from './DropList';
 import './Product.css';
 
 class Product extends Component {
@@ -28,12 +29,13 @@ class Product extends Component {
             </Link>
           </div>
           <div id="collection">
-            <div className="em15">{this.props.item.model}</div>
+            <div className="em2">{this.props.item.model}</div>
             <div className="animated fadeIn delay-0.5s">
               <img src={this.props.item.imgUrl} alt="shoes model" width={300} />
             </div>
           </div>
           <div className="em2 margin-left">{this.props.item.price}</div>
+          <DropList />
           <div className="margin-top margin-left">
             <b>Product information:</b>
           </div>
