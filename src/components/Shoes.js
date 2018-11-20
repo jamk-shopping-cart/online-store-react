@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import { Link } from './Router';
 import './Shoes.css';
 
-const Shoes = ({ data }) => {
-  console.log(data);
+const Shoes = ({ item, callback }) => {
+  console.log(item);
   return (
-    <div className="animated fadeIn delay-1s">
+    <div className="animated fadeIn delay-1s" onClick={callback.bind(this, item)}>
       <Link to="product">
-        <img src={data.imgUrl} alt="shoes model" width={300} />
+        <img src={item.imgUrl} alt="shoes model" width={300} />
       </Link>
-      <h4>{data.model}</h4>
-      <h6>{data.price}</h6>
+      <h4>{item.model}</h4>
+      <h6>{item.price}</h6>
     </div>
   );
 };

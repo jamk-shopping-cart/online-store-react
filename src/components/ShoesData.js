@@ -21,6 +21,8 @@ class ShoesData extends Component {
   }
 
   render() {
+    const callback = this.props.callback;
+    console.log('ShoesData: typeof callback ' + typeof callback, this.props);
     const { error, isLoaded, items } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -31,7 +33,7 @@ class ShoesData extends Component {
         <ul>
           {items.map((item, index) => (
             <li key={item.id}>
-              <Shoes key={index} data={item} />
+              <Shoes key={index} item={item} callback={callback} />
             </li>
           ))}
         </ul>
