@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from './Router';
+import Counter from './Counter';
 import './Navigation.css';
 
 class Navigation extends Component {
@@ -17,6 +18,7 @@ class Navigation extends Component {
             <i className="fas fa-shopping-cart em2" />
           </Link>
         </nav>
+        <Counter />
       </React.Fragment>
     );
   }

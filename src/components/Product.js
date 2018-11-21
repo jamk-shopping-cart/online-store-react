@@ -37,9 +37,7 @@ class Product extends Component {
           <div className="row">
             <span className="inline em25 margin-left-price">{this.props.item.price}</span>
             <DropList />
-            <Link to="/" className="navbar-brand text-warning">
-              <i className="fas fa-2x fa-cart-plus" />
-            </Link>
+            <i className="fas fa-2x fa-cart-plus" />
           </div>
           <div className="margin-top margin-left">
             <b>Product information:</b>
