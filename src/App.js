@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   setCount(count) {
-    console.log(`app.setCount: ${count}`, count);
+    console.log(`app.setCount: ${count}`);
     this.setState({ count });
   }
 
@@ -55,5 +55,6 @@ export default App;
 // App <- Route (callback) <- Collection (callback) <- ShoesData (callback) <- Shoes (callback)
 // App -> Route (item) -> Product (item)
 
+// Product -> Navigation (count) -> Counter (count)
 // App <- Route (callback) <- Product (callback)
-// App -> Route (count) -> ? Product (count ? -> Navigation (count) -> Counter (count)
+// App -> Route (count) -> ? Product (count) ? -> Navigation (count) -> Counter (count)
