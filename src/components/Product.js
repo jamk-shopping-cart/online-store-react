@@ -34,7 +34,7 @@ class Product extends Component {
               <img src={this.props.item.imgUrl} alt="shoes model" width={300} />
             </div>
           </div>
-          <div className="em2 margin-left">{this.props.item.price}</div>
+          <span className="inline em2 margin-left">{this.props.item.price}</span>
           <DropList />
           <div className="margin-top margin-left">
             <b>Product information:</b>

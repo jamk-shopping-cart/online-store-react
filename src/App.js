@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'roboto-fontface';
 import 'animate.css/animate.css';
+import 'react-dropdown/style.css';
 import React, { Component } from 'react';
 import { Route } from './components/Router';
 import StartPage from './components/StartPage';
