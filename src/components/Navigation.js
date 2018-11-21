@@ -5,6 +5,7 @@ import './Navigation.css';
 
 class Navigation extends Component {
   render() {
+    console.log('Navigation: this.props.count:', this.props.count);
     return (
       <React.Fragment>
         <nav className="navbar navbar-light">
@@ -18,7 +19,7 @@ class Navigation extends Component {
             <i className="fas fa-shopping-cart em2" />
           </Link>
         </nav>
-        <Counter />
+        <Counter count={this.props.count} />
       </React.Fragment>
     );
   }

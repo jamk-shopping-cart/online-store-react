@@ -6,7 +6,6 @@ import 'react-dropdown/style.css';
 import React, { Component } from 'react';
 import { Route } from './components/Router';
 import StartPage from './components/StartPage';
-import Navigation from './components/Navigation';
 import RegistrationForm from './components/RegistrationForm';
 import Collection from './components/Collection';
 import Product from './components/Product';
@@ -26,20 +25,35 @@ class App extends Component {
     this.setState({ item });
   }
 
+  setCount(count) {
+    console.log(`app.setCount: ${count}`, count);
+    this.setState({ count });
+  }
+
   render() {
     return (
       <div>
         <Route exact path="/" component={StartPage} />
         <Route exact path="/registration" component={RegistrationForm} />
-        <Route exact path="/navigation" component={Navigation} />
         <Route exact path="/collection" component={Collection} callback={this.setItem.bind(this)} />
-        <Route exact path="/product" component={Product} item={this.state.item} />
+        <Route
+          exact
+          path="/product"
+          component={Product}
+          item={this.state.item}
+          callback={this.setCount.bind(this)}
+          count={this.state.count}
+        />
         <Route exact path="/signin" component={SignIn} />
       </div>
     );
   }
 }
-// App -> Route (callback) -> Collection (callback) -> ShoesData (callback) -> Shoes (callback)
-// App -> Route (item) -> Product (item)
 
 export default App;
+
+// App <- Route (callback) <- Collection (callback) <- ShoesData (callback) <- Shoes (callback)
+// App -> Route (item) -> Product (item)
+
+// App <- Route (callback) <- Product (callback)
+// App -> Route (count) -> ? Product (count ? -> Navigation (count) -> Counter (count)

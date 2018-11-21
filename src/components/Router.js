@@ -55,10 +55,10 @@ export class Route extends Component {
   };
 
   render() {
-    const { path, exact, component, render, callback, item } = this.props;
+    const { path, exact, component, render, callback, item, count } = this.props;
     const match = matchPath(window.location.pathname, { path, exact });
     if (!match) return null;
-    else if (component) return React.createElement(component, { match, callback, item });
+    else if (component) return React.createElement(component, { match, callback, item, count });
     else if (render) return render({ match });
     return null;
   }

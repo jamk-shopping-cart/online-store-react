@@ -5,6 +5,17 @@ import DropList from './DropList';
 import './Product.css';
 
 class Product extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 1 };
+  }
+
+  handleClick() {
+    console.log('state:', this.state);
+    this.setState({ count: this.state.count + 1 });
+    this.props.callback(this.state.count);
+  }
+
   render() {
     console.log('Product: this.props.item:', this.props.item, this.props);
     if (!this.props.item) {
@@ -22,12 +33,8 @@ class Product extends Component {
     } else {
       return (
         <React.Fragment>
-          <Navigation />
-          <div className="left10 top5">
-            {/* <Link to="collection">
-              <i className="fas fa-2x fa-arrow-left grey" />
-            </Link> */}
-          </div>
+          <Navigation count={this.props.count} />
+          <div className="left10 top5" />
           <div id="collection">
             <div className="em2">{this.props.item.model}</div>
             <div className="animated fadeIn delay-0.5s">
@@ -37,7 +44,7 @@ class Product extends Component {
           <div className="row">
             <span className="inline em25 margin-left-price">{this.props.item.price}</span>
             <DropList />
-            <i className="fas fa-2x fa-cart-plus" />
+            <i className="fas fa-2x fa-cart-plus" onClick={this.handleClick.bind(this)} />
           </div>
           <div className="margin-top margin-left">
             <b>Product information:</b>
