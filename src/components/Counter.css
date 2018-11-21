@@ -1,0 +1,11 @@
+.circle {
+  background-color: #fff;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 1.5em;
+  position: relative;
+  left: 23.5em;
+  bottom: 4.2em;
+  border: 0.1em solid #ff9628;
+  background-color: #00456b;
+}
