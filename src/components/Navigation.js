@@ -11,7 +11,7 @@ class Navigation extends Component {
             <i className="fas fa-user em2" />
           </Link>
           <Link to="collection" className="navbar-brand text-warning">
-            <p className="em2">ShoeFlex</p>
+            <p className="em21">ShoeFlex</p>
           </Link>
           <Link to="/" className="navbar-brand text-warning">
             <i className="fas fa-shopping-cart em2" />

@@ -24,9 +24,9 @@ class Product extends Component {
         <React.Fragment>
           <Navigation />
           <div className="left10 top5">
-            <Link to="collection">
+            {/* <Link to="collection">
               <i className="fas fa-2x fa-arrow-left grey" />
-            </Link>
+            </Link> */}
           </div>
           <div id="collection">
             <div className="em2">{this.props.item.model}</div>
@@ -34,12 +34,17 @@ class Product extends Component {
               <img src={this.props.item.imgUrl} alt="shoes model" width={300} />
             </div>
           </div>
-          <span className="inline em2 margin-left">{this.props.item.price}</span>
-          <DropList />
+          <div className="row">
+            <span className="inline em25 margin-left-price">{this.props.item.price}</span>
+            <DropList />
+            <Link to="/" className="navbar-brand text-warning">
+              <i className="fas fa-2x fa-cart-plus" />
+            </Link>
+          </div>
           <div className="margin-top margin-left">
             <b>Product information:</b>
           </div>
-          <div className="margin-left margin-right">{this.props.item.description}</div>
+          <div className="margin-left margin-right justify">{this.props.item.description}</div>
           <div className="margin-top margin-left">
             <b>Color:</b> <span className="em12">{this.props.item.color}</span>
           </div>

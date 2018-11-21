@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from './Router';
+// import { Link } from './Router';
 import Navigation from './Navigation';
 import './RegistrationForm.css';
 
@@ -9,9 +9,9 @@ class RegistrationForm extends Component {
       <React.Fragment>
         <Navigation />
         <div className="left10 top5">
-          <Link to="signin">
+          {/* <Link to="signin">
             <i className="fas fa-2x fa-arrow-left grey" />
-          </Link>
+          </Link> */}
         </div>
         <p className="em2">Registration</p>
         <form id="regForm">
@@ -26,7 +26,9 @@ class RegistrationForm extends Component {
           <label>
             <input id="confirm" type="checkbox" required /> I accept the privacy policy
           </label>
-          <input type="submit" value="Send" />
+          <button type="button" className="btn btn-primary col-8">
+            Send
+          </button>
         </form>
       </React.Fragment>
     );

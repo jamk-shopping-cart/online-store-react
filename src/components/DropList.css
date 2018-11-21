@@ -1,5 +1,16 @@
 .Dropdown-root {
   display: inline-block;
+  margin-left: 4em;
+}
+
+.Dropdown-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 5em;
-  margin-left: 5em;
+  height: 3em;
+}
+
+.Dropdown-placeholder {
+  padding-left: 1.5em;
 }
