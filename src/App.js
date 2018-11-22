@@ -17,7 +17,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.setItem = this.setItem.bind(this);
-    this.state = { item: null };
+    this.state = { item: null, count: 0 };
   }
 
   setItem(item) {
@@ -25,23 +25,29 @@ class App extends Component {
     this.setState({ item });
   }
 
-  setCount(count) {
-    console.log(`app.setCount: ${count}`);
-    this.setState({ count });
+  increaseCount() {
+    console.log(`app.increaseCount: increase`);
+    this.setState({ count: this.state.count + 1 });
   }
 
   render() {
     return (
       <div>
         <Route exact path="/" component={StartPage} />
-        <Route exact path="/registration" component={RegistrationForm} />
-        <Route exact path="/collection" component={Collection} callback={this.setItem.bind(this)} />
+        <Route exact path="/registration" component={RegistrationForm} count={this.state.count} />
+        <Route
+          exact
+          path="/collection"
+          component={Collection}
+          callback={this.setItem.bind(this)}
+          count={this.state.count}
+        />
         <Route
           exact
           path="/product"
           component={Product}
           item={this.state.item}
-          callback={this.setCount.bind(this)}
+          callback={this.increaseCount.bind(this)}
           count={this.state.count}
         />
         <Route exact path="/signin" component={SignIn} />

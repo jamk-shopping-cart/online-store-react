@@ -5,15 +5,8 @@ import DropList from './DropList';
 import './Product.css';
 
 class Product extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { count: 1 };
-  }
-
   handleClick() {
-    console.log('state:', this.state);
-    this.setState({ count: this.state.count + 1 });
-    this.props.callback(this.state.count);
+    this.props.callback(this.props.item);
   }
 
   render() {

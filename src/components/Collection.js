@@ -8,7 +8,7 @@ class Collection extends Component {
     console.log('Collection: this.props.callback' + typeof this.props.callback, this.props);
     return (
       <React.Fragment>
-        <Navigation />
+        <Navigation count={this.props.count} />
         <div id="collection">
           <div id="collectionHeader" className="animated pulse">
             2018 Collection

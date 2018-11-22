@@ -6,7 +6,7 @@ class RegistrationForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navigation />
+        <Navigation count={this.props.count} />
         <div className="left10 top5" />
         <p className="em2">Registration</p>
         <form id="regForm">
