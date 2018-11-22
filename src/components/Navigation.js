@@ -32,7 +32,9 @@ class Navigation extends Component {
               <Link to="signin" className="navbar-brand text-warning">
                 <i className="fas fa-user em2" />
               </Link>
-              <a className="hidden" />
+              <a href="/" className="hidden">
+                hidden
+              </a>
             </div>
             <Link to="collection" className="navbar-brand text-warning">
               <p className="em21">ShoeFlex</p>

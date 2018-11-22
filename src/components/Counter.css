@@ -14,11 +14,3 @@
   display: inline-block;
   z-index: 1;
 }
-
-.hidden {
-  height: 1.5em;
-  width: 1.5em;
-  position: relative;
-  display: inline-block;
-  visibility: hidden;
-}
