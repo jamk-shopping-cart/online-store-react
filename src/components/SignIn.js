@@ -6,7 +6,9 @@ class StartPage extends Component {
   render() {
     return (
       <div className="wrap">
-        <div className="top em3">ShoeFlex</div>
+        <div className="top em3">
+          <Link to="collection">ShoeFlex</Link>
+        </div>
         <div className="center">
           <form id="signForm">
             <input id="si_username" type="text" placeholder="USERNAME" autoFocus required />
