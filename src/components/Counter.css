@@ -5,11 +5,20 @@
   border-radius: 1.5em;
   position: relative;
   left: 2.2em;
-  bottom: 1em;
+  bottom: 1.4em;
   border: 0.1em solid #ff9628;
   background-color: #00456b;
   color: #ff9628;
+  font-weight: 400;
   padding-left: 0.35em;
   display: inline-block;
   z-index: 1;
+}
+
+.hidden {
+  height: 1.5em;
+  width: 1.5em;
+  position: relative;
+  display: inline-block;
+  visibility: hidden;
 }
