@@ -15,11 +15,13 @@ class Navigation extends Component {
           <Link to="collection" className="navbar-brand text-warning">
             <p className="em21">ShoeFlex</p>
           </Link>
-          <Link to="/" className="navbar-brand text-warning">
-            <i className="fas fa-shopping-cart em2" />
-          </Link>
+          <div>
+            <Counter count={this.props.count} />
+            <Link to="/" className="navbar-brand text-warning">
+              <i className="fas fa-shopping-cart em2" />
+            </Link>
+          </div>
         </nav>
-        <Counter count={this.props.count} />
       </React.Fragment>
     );
   }

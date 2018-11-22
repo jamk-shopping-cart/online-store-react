@@ -4,10 +4,12 @@
   width: 1.5em;
   border-radius: 1.5em;
   position: relative;
-  left: 23.5em;
-  bottom: 4.2em;
+  left: 2.2em;
+  bottom: 1em;
   border: 0.1em solid #ff9628;
   background-color: #00456b;
   color: #ff9628;
   padding-left: 0.35em;
+  display: inline-block;
+  z-index: 1;
 }
