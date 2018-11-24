@@ -4,8 +4,6 @@ import './ShoppingCart.css';
 
 class ShoppingCart extends Component {
   render() {
-    console.log('ShoppingCart: this.props.item:', this.props.item, this.props);
-    console.log('ShoppingCart: this.props.count:', this.props.count);
     console.log('ShoppingCart: this.props.cart:', this.props.cart);
 
     return (

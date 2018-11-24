@@ -103,4 +103,5 @@ export default App;
 // App <- Route (callback) <- Product (callback)
 // App -> Route (count) -> ? Product (count) ? -> Navigation (count) -> Counter (count)
 
-// App <- Route (callback) <- Product (callback)
+// App <- Route (callback) <- Product (callback) <- Navigation (callback)
+// App -> Route (cart) -> ShoppingCart (cart)
