@@ -11,6 +11,7 @@ import Collection from './components/Collection';
 import Product from './components/Product';
 import SignIn from './components/SignIn';
 import './App.css';
+import ShoppingCart from './components/ShoppingCart';
 
 class App extends Component {
   constructor(props) {
@@ -47,6 +48,7 @@ class App extends Component {
     return (
       <div>
         <Route exact path="/" component={StartPage} />
+        <Route exact path="/signin" component={SignIn} />
         <Route exact path="/registration" component={RegistrationForm} count={this.state.count} />
         <Route
           exact
@@ -63,7 +65,7 @@ class App extends Component {
           callback={this.increaseCount.bind(this)}
           count={this.state.count}
         />
-        <Route exact path="/signin" component={SignIn} />
+        <Route exact path="/cart" component={ShoppingCart} item={this.state.item} count={this.state.count} />
       </div>
     );
   }
