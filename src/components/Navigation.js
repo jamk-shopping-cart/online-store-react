@@ -4,10 +4,6 @@ import Counter from './Counter';
 import './Navigation.css';
 
 class Navigation extends Component {
-  // handleClick() {
-  //   this.props.callback(this.props.item);
-  // }
-
   render() {
     console.log('Navigation: this.props.count:', this.props.count);
     if (!this.props.count) {
@@ -46,10 +42,7 @@ class Navigation extends Component {
             <div>
               <Counter count={this.props.count} />
               <Link to="cart" className="navbar-brand text-warning">
-                <i
-                  className="fas fa-shopping-cart em2"
-                  // onClick={this.handleClick.bind(this)}
-                />
+                <i className="fas fa-shopping-cart em2" />
               </Link>
             </div>
           </nav>

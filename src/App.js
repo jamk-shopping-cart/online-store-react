@@ -59,7 +59,7 @@ class App extends Component {
     this.setState({ cart });
     window.localStorage.setItem('cart', JSON.stringify(cart));
     console.log(`app.addItemToCart: cart`, cart);
-    console.log(`app.addItemToCart: itemStored`, itemStored);
+    // console.log(`app.addItemToCart: itemStored`, itemStored);
   }
 
   render() {
@@ -103,5 +103,4 @@ export default App;
 // App <- Route (callback) <- Product (callback)
 // App -> Route (count) -> ? Product (count) ? -> Navigation (count) -> Counter (count)
 
-// App <- Route (callback) <- Product (callback) <- Navigation (callback)
 // App -> Route (cart) -> ShoppingCart (cart)
