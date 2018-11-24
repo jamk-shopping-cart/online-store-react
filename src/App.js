@@ -10,24 +10,37 @@ import RegistrationForm from './components/RegistrationForm';
 import Collection from './components/Collection';
 import Product from './components/Product';
 import SignIn from './components/SignIn';
-
 import './App.css';
 
 class App extends Component {
   constructor(props) {
+    console.log('item: ' + window.localStorage.getItem('item'));
+    console.log('count: ' + window.localStorage.getItem('count'));
+    // window.localStorage.setItem('count', 0);
+    // window.localStorage.clear();
     super(props);
+    if (window.localStorage) {
+      console.log('Local Storage is available');
+    } else {
+      window.alert('Local Storage is not available');
+    }
+    const count = Number(window.localStorage.getItem('count') || 0);
+    const item = JSON.parse(window.localStorage.getItem('item') || 'null');
     this.setItem = this.setItem.bind(this);
-    this.state = { item: null, count: 0 };
+    this.state = { item, count };
   }
 
   setItem(item) {
     console.log(`app.setItem: ${item.model}`, item);
     this.setState({ item });
+    window.localStorage.setItem('item', JSON.stringify(item));
   }
 
   increaseCount() {
     console.log(`app.increaseCount: increase`);
-    this.setState({ count: this.state.count + 1 });
+    const count = this.state.count + 1;
+    this.setState({ count });
+    window.localStorage.setItem('count', count);
   }
 
   render() {
