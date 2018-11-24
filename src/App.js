@@ -17,8 +17,7 @@ class App extends Component {
   constructor(props) {
     console.log('item: ' + window.localStorage.getItem('item'));
     console.log('count: ' + window.localStorage.getItem('count'));
-    // window.localStorage.setItem('count', 0);
-    // window.localStorage.clear();
+    window.localStorage.clear();
     super(props);
     if (window.localStorage) {
       console.log('Local Storage is available');
@@ -27,8 +26,9 @@ class App extends Component {
     }
     const count = Number(window.localStorage.getItem('count') || 0);
     const item = JSON.parse(window.localStorage.getItem('item') || 'null');
+    const cart = JSON.parse(window.localStorage.getItem('cart') || '{}');
     this.setItem = this.setItem.bind(this);
-    this.state = { item, count };
+    this.state = { item, count, cart };
   }
 
   setItem(item) {
@@ -37,11 +37,29 @@ class App extends Component {
     window.localStorage.setItem('item', JSON.stringify(item));
   }
 
-  increaseCount() {
+  increaseCount(newItem) {
     console.log(`app.increaseCount: increase`);
     const count = this.state.count + 1;
     this.setState({ count });
+    if (newItem) {
+      this.addItemToCart(newItem);
+    }
     window.localStorage.setItem('count', count);
+  }
+
+  addItemToCart(item) {
+    const cart = this.state.cart;
+    const itemStored = cart[item.id] || {
+      item,
+      count: 0,
+      size: 47
+    };
+    itemStored.count++;
+    cart[item.id] = itemStored;
+    this.setState({ cart });
+    window.localStorage.setItem('cart', JSON.stringify(cart));
+    console.log(`app.addItemToCart: cart`, cart);
+    console.log(`app.addItemToCart: itemStored`, itemStored);
   }
 
   render() {
@@ -65,7 +83,13 @@ class App extends Component {
           callback={this.increaseCount.bind(this)}
           count={this.state.count}
         />
-        <Route exact path="/cart" component={ShoppingCart} item={this.state.item} count={this.state.count} />
+        <Route
+          exact
+          path="/cart"
+          component={ShoppingCart}
+          callback={this.addItemToCart.bind(this)}
+          cart={this.state.cart}
+        />
       </div>
     );
   }
@@ -76,6 +100,7 @@ export default App;
 // App <- Route (callback) <- Collection (callback) <- ShoesData (callback) <- Shoes (callback)
 // App -> Route (item) -> Product (item)
 
-// Product -> Navigation (count) -> Counter (count)
 // App <- Route (callback) <- Product (callback)
 // App -> Route (count) -> ? Product (count) ? -> Navigation (count) -> Counter (count)
+
+// App <- Route (callback) <- Product (callback)
