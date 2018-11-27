@@ -10,29 +10,28 @@ class ShoppingCart extends Component {
       <React.Fragment>
         <Navigation count={this.props.count} />
         <div id="collection">
-          <div className="em2 margin-top">Shopping Cart</div>
+          <div className="em2 margin-top">Shopping Cart:</div>
           <div className="animated fadeIn delay-0.5s">
-            {/* this is wrong: */}
-            {/* {Object.keys(this.props.cart).map(index => (
-              <div key={index}>
-                {this.props.cart[index].map(item => (
-                  <div key={item.id}>{item.price}</div>
-                ))}
-              </div>
-            ))} */}
-            {/* 1. this.props.cart -> object {
-              1: {item: {…}, count: 1, size: 47}
-              2: {item: {…}, count: 2, size: 47}
-              5: {item: {…}, count: 5, size: 47}
-            }
-            2. Object.keys(this.props.cart) -> to array [
-              1: {item: {…}, count: 1, size: 47}
-              2: {item: {…}, count: 2, size: 47}
-              5: {item: {…}, count: 5, size: 47}
-            ]
-            3. inside the array object item, how to map() this array? */}
             {Object.keys(this.props.cart).map(index => (
-              <li key={index}>index={index}</li>
+              <li key={index}>
+                <div className="animated fadeIn delay-1s">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td rowSpan="2">
+                          <img src={this.props.cart[index].item.imgUrl} alt="shoes model" width={200} />
+                        </td>
+                        <td>{this.props.cart[index].item.model}</td>
+                        <td>{this.props.cart[index].item.price}</td>
+                      </tr>
+                      <tr>
+                        <td>Size {this.props.cart[index].size}</td>
+                        <td>QTY {this.props.cart[index].count}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
             ))}
           </div>
         </div>
