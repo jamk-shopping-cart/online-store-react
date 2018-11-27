@@ -17,7 +17,7 @@ class Navigation extends Component {
               <p className="em21">ShoeFlex</p>
             </Link>
             <div>
-              <Link to="/" className="navbar-brand text-warning">
+              <Link to="cart" className="navbar-brand text-warning">
                 <i className="fas fa-shopping-cart em2" />
               </Link>
             </div>
