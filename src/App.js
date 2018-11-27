@@ -49,10 +49,12 @@ class App extends Component {
 
   addItemToCart(item) {
     const cart = this.state.cart;
+    const minSize = 38;
+    const maxSize = 47;
     const itemStored = cart[item.id] || {
       item,
       count: 0,
-      size: 47
+      size: Math.round(Math.random() * (maxSize - minSize) + minSize)
     };
     itemStored.count++;
     cart[item.id] = itemStored;
