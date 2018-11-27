@@ -35,10 +35,20 @@ class ShoppingCart extends Component {
               ))}
             </div>
           </div>
-          <div className="em2.5 margin-left margin-right margin-top">Total:</div>
+          <div className="em2.5 margin-left margin-right margin-top">Total: </div>
           <hr />
-          <div className="margin-top margin-left">Items:</div>
-          <div className=" margin-top margin-left">Delivery:</div>
+          <div className="margin-top margin-left">
+            Items:
+            {Object.keys(this.props.cart).map(index => (
+              <div key={index}>
+                {this.props.cart[index].count * Number(this.props.cart[index].item.price.substring(1))}
+              </div>
+            ))}
+          </div>
+          <div className="margin-top margin-left">
+            Delivery:
+            <div>10€</div>
+          </div>
           <div className="margin-top col-12 text-center">
             <button type="button" className="btn btn-primary">
               Continue to Pay
