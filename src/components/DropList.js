@@ -6,6 +6,11 @@ const options = ['Size', 40, 41, 42, 43, 44, 45, 46, 47];
 const defaultOption = options[0];
 
 class DropList extends React.Component {
+  _onSelect(size) {
+    console.log(`size is object:`, size);
+    console.log(`object value is size.value =`, size.value);
+  }
+
   render() {
     return (
       <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
