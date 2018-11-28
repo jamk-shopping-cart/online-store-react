@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 let instances = [];
-
 const register = comp => instances.push(comp);
 const unregister = comp => instances.splice(instances.indexOf(comp), 1);
 
@@ -30,7 +29,6 @@ export class Link extends Component {
 
   render() {
     const { to, children } = this.props;
-
     return (
       <a href={to} onClick={this.handleClick}>
         {children}
@@ -73,7 +71,6 @@ Route.propTypes = {
 
 const matchPath = (pathname, options) => {
   const { exact = false, path } = options;
-
   if (!path) {
     return {
       path: null,
@@ -83,18 +80,15 @@ const matchPath = (pathname, options) => {
   }
 
   const match = new RegExp(`^${path}`).exec(pathname);
-
   if (!match) {
     return null;
   }
 
   const url = match[0];
   const isExact = pathname === url;
-
   if (exact && !isExact) {
     return null;
   }
-
   return {
     path,
     url,

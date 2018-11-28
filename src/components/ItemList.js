@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Shoes from './Shoes';
+import Item from './Item';
 
-class ShoesData extends Component {
+class ItemList extends Component {
   constructor(props) {
     super(props);
     this.state = { error: null, isLoaded: false, items: [] };
@@ -22,7 +22,7 @@ class ShoesData extends Component {
 
   render() {
     const callback = this.props.callback;
-    console.log('ShoesData: typeof callback ' + typeof callback, this.props);
+    // console.log('ItemList: typeof callback ' + typeof callback, this.props);
     const { error, isLoaded, items } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -33,7 +33,7 @@ class ShoesData extends Component {
         <ul>
           {items.map((item, index) => (
             <li key={item.id}>
-              <Shoes key={index} item={item} callback={callback} />
+              <Item key={index} item={item} callback={callback} />
             </li>
           ))}
         </ul>
@@ -42,4 +42,4 @@ class ShoesData extends Component {
   }
 }
 
-export default ShoesData;
+export default ItemList;

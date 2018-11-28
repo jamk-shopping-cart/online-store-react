@@ -18,7 +18,7 @@ class ShoppingCart extends Component {
 
   render() {
     if (Object.keys(this.props.cart).length !== 0) {
-      console.log('ShoppingCart: this.props.cart:', this.props.cart);
+      // console.log('ShoppingCart: this.props.cart:', this.props.cart);
       return (
         <React.Fragment>
           <Navigation count={this.props.count} />
@@ -48,10 +48,6 @@ class ShoppingCart extends Component {
               ))}
             </div>
           </div>
-          <div className="em2.5 margin-left margin-right margin-top animated fadeIn delay-1s">
-            Total: €{this.totalPriceCart(this.props.cart) + this.toDelivery()}
-          </div>
-          <hr />
           <div className="margin-top margin-left animated fadeIn delay-1s">
             Items: €{this.totalPriceCart(this.props.cart)}
             {/* {Object.keys(this.props.cart).map(index => (
@@ -65,6 +61,10 @@ class ShoppingCart extends Component {
             Delivery:
             <span> €10</span>
           </div>
+          <hr />
+          <div className="em2.5 margin-left margin-right margin-top animated fadeIn delay-1s">
+            Total: €{this.totalPriceCart(this.props.cart) + this.toDelivery()}
+          </div>
           <div className="margin-top col-12 text-center animated fadeIn delay-2s">
             <button type="button" className="btn btn-primary">
               Continue to Pay
@@ -72,15 +72,17 @@ class ShoppingCart extends Component {
           </div>
         </React.Fragment>
       );
-    } else console.log('shopping cart is empty');
-    return (
-      <React.Fragment>
-        <Navigation count={this.props.count} />
-        <div id="collection" className="margin-top">
-          Shopping cart is empty now.
-        </div>
-      </React.Fragment>
-    );
+    } else {
+      // console.log('shopping cart is empty');
+      return (
+        <React.Fragment>
+          <Navigation count={this.props.count} />
+          <div id="collection" className="margin-top">
+            Shopping cart is empty now.
+          </div>
+        </React.Fragment>
+      );
+    }
   }
 }
 

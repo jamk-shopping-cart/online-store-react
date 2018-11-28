@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Link } from './Router';
 import Navigation from './Navigation';
 import DropList from './DropList';
-import './Product.css';
+import './ItemInfo.css';
 
-class Product extends Component {
+class ItemInfo extends Component {
   handleClick() {
-    console.log(`handleClick this.size=${this.size}`);
+    // console.log(`handleClick this.size=${this.size}`);
     this.props.callback(this.props.item, this.size);
   }
 
@@ -15,7 +15,7 @@ class Product extends Component {
   }
 
   render() {
-    console.log('Product: this.props.item:', this.props.item, this.props);
+    // console.log('ItemInfo: this.props.item:', this.props.item, this.props);
     if (!this.props.item) {
       return (
         <React.Fragment>
@@ -24,7 +24,7 @@ class Product extends Component {
             <Link to="collection">
               <i className="fas fa-2x fa-arrow-left grey" />
             </Link>
-            <div className="margin-top">Please select a product from the Collection</div>
+            <div className="margin-top">Please select an Item from the Collection</div>
           </div>
         </React.Fragment>
       );
@@ -63,4 +63,4 @@ class Product extends Component {
   }
 }
 
-export default Product;
+export default ItemInfo;

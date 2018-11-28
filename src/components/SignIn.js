@@ -13,7 +13,6 @@ class StartPage extends Component {
           <form id="signForm">
             <input id="si_username" type="text" placeholder="USERNAME" autoFocus required />
             <input id="si_password" type="password" placeholder="PASSWORD" required />
-            {/* need to check this inputfield */}
           </form>
           <p className="em2 font400">Log In</p>
         </div>

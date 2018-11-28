@@ -2,14 +2,14 @@ import React from 'react';
 import './DropList.css';
 import Dropdown from 'react-dropdown';
 
-const options = ['Size', 40, 41, 42, 43, 44, 45, 46, 47];
+const options = ['Size', 38, 39, 40, 41, 42, 43, 44, 45, 46, 47];
 const defaultOption = options[0];
 
 class DropList extends React.Component {
   onSelect(size) {
-    console.log(`size is object:`, size);
-    console.log(`object value is size.value =`, size.value);
-    console.log('onSelect', this.props);
+    // console.log(`size is object:`, size);
+    // console.log(`object value is size.value =`, size.value);
+    // console.log('onSelect', this.props);
     this.props.setSize(size.value);
   }
 

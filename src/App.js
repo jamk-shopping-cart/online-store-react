@@ -6,40 +6,39 @@ import 'react-dropdown/style.css';
 import React, { Component } from 'react';
 import { Route } from './components/Router';
 import StartPage from './components/StartPage';
-import RegistrationForm from './components/RegistrationForm';
+import Registration from './components/Registration';
 import Collection from './components/Collection';
-import Product from './components/Product';
+import ItemInfo from './components/ItemInfo';
 import SignIn from './components/SignIn';
 import './App.css';
 import ShoppingCart from './components/ShoppingCart';
 
 class App extends Component {
   constructor(props) {
-    console.log('item: ' + window.localStorage.getItem('item'));
-    console.log('count: ' + window.localStorage.getItem('count'));
+    // console.log('item: ' + window.localStorage.getItem('item'));
+    // console.log('count: ' + window.localStorage.getItem('count'));
     window.localStorage.clear();
     super(props);
     if (window.localStorage) {
-      console.log('Local Storage is available');
+      // console.log('Local Storage is available');
     } else {
       window.alert('Local Storage is not available');
     }
     const count = Number(window.localStorage.getItem('count') || 0);
     const item = JSON.parse(window.localStorage.getItem('item') || 'null');
     const cart = JSON.parse(window.localStorage.getItem('cart') || '{}');
-    // const size = Number(window.localStorage.getItem('size') || 40);
     this.setItem = this.setItem.bind(this);
     this.state = { item, count, cart };
   }
 
   setItem(item) {
-    console.log(`app.setItem: ${item.model}`, item);
+    // console.log(`app.setItem: ${item.model}`, item);
     this.setState({ item });
     window.localStorage.setItem('item', JSON.stringify(item));
   }
 
   addItemToCart(item, size) {
-    console.log(`app.addItemToCart: added to cart`);
+    // console.log(`app.addItemToCart: added to cart`);
     const count = this.state.count + 1;
     this.setState({ count });
     this.updateCart(item, size);
@@ -47,17 +46,20 @@ class App extends Component {
   }
 
   updateCart(item, size) {
-    console.log('itemToCart size=', size);
+    // console.log('itemToCart size=', size);
     const cart = this.state.cart;
-    // const minSize = 40;
-    // const maxSize = 47;
-    const itemStored = cart[item.id] || { item, count: 0, size: isNaN(size) ? 40 : size };
-    // size: Math.round(Math.random() * (maxSize - minSize) + minSize)
+    const minSize = 38;
+    const maxSize = 47;
+    const itemStored = cart[item.id] || {
+      item,
+      count: 0,
+      size: isNaN(size) ? Math.round(Math.random() * (maxSize - minSize) + minSize) : size
+    };
     itemStored.count++;
     cart[item.id] = itemStored;
     this.setState({ cart });
     window.localStorage.setItem('cart', JSON.stringify(cart));
-    console.log(`app.updateCart: cart`, cart);
+    // console.log(`app.updateCart: cart`, cart);
     // console.log(`app.updateCart: itemStored`, itemStored);
   }
 
@@ -66,7 +68,7 @@ class App extends Component {
       <div>
         <Route exact path="/" component={StartPage} />
         <Route exact path="/signin" component={SignIn} />
-        <Route exact path="/registration" component={RegistrationForm} count={this.state.count} />
+        <Route exact path="/registration" component={Registration} count={this.state.count} />
         <Route
           exact
           path="/collection"
@@ -76,8 +78,8 @@ class App extends Component {
         />
         <Route
           exact
-          path="/product"
-          component={Product}
+          path="/iteminfo"
+          component={ItemInfo}
           item={this.state.item}
           callback={this.addItemToCart.bind(this)}
           count={this.state.count}
@@ -90,13 +92,13 @@ class App extends Component {
 
 export default App;
 
-// App <- Route (callback) <- Collection (callback) <- ShoesData (callback) <- Shoes (callback)
-// App -> Route (item) -> Product (item)
+// App <- Route (callback) <- Collection (callback) <- ItemList (callback) <- Item (callback)
+// App -> Route (item) -> ItemInfo (item)
 
-// App <- Route (callback) <- Product (callback)
-// App -> Route (count) -> ? Product (count) ? -> Navigation (count) -> Counter (count)
+// App <- Route (callback) <- ItemInfo (callback)
+// App -> Route (count) -> ItemInfo (count) -> Navigation (count) -> Counter (count)
 
 // App -> Route (cart) -> ShoppingCart (cart)
 
-// App <- Route (callback) <- Product (callback) <- DropList (callback)
+// App <- Route (callback) <- ItemInfo (callback) <- DropList (callback)
 // App -> Route (size) -> ShoppingCart (size)

@@ -5,7 +5,7 @@ import './Navigation.css';
 
 class Navigation extends Component {
   render() {
-    console.log('Navigation: this.props.count:', this.props.count);
+    // console.log('Navigation: this.props.count:', this.props.count);
     if (!this.props.count) {
       return (
         <React.Fragment>
