@@ -27,6 +27,7 @@ class App extends Component {
     const count = Number(window.localStorage.getItem('count') || 0);
     const item = JSON.parse(window.localStorage.getItem('item') || 'null');
     const cart = JSON.parse(window.localStorage.getItem('cart') || '{}');
+    // const size = Number(window.localStorage.getItem('size') || 40);
     this.setItem = this.setItem.bind(this);
     this.state = { item, count, cart };
   }
@@ -37,31 +38,27 @@ class App extends Component {
     window.localStorage.setItem('item', JSON.stringify(item));
   }
 
-  increaseCount(newItem) {
-    console.log(`app.increaseCount: increase`);
+  addItemToCart(item, size) {
+    console.log(`app.addItemToCart: added to cart`);
     const count = this.state.count + 1;
     this.setState({ count });
-    if (newItem) {
-      this.addItemToCart(newItem);
-    }
+    this.updateCart(item, size);
     window.localStorage.setItem('count', count);
   }
 
-  addItemToCart(item) {
+  updateCart(item, size) {
+    console.log('itemToCart size=', size);
     const cart = this.state.cart;
-    const minSize = 38;
-    const maxSize = 47;
-    const itemStored = cart[item.id] || {
-      item,
-      count: 0,
-      size: Math.round(Math.random() * (maxSize - minSize) + minSize)
-    };
+    // const minSize = 40;
+    // const maxSize = 47;
+    const itemStored = cart[item.id] || { item, count: 0, size: isNaN(size) ? 40 : size };
+    // size: Math.round(Math.random() * (maxSize - minSize) + minSize)
     itemStored.count++;
     cart[item.id] = itemStored;
     this.setState({ cart });
     window.localStorage.setItem('cart', JSON.stringify(cart));
-    console.log(`app.addItemToCart: cart`, cart);
-    // console.log(`app.addItemToCart: itemStored`, itemStored);
+    console.log(`app.updateCart: cart`, cart);
+    // console.log(`app.updateCart: itemStored`, itemStored);
   }
 
   render() {
@@ -82,16 +79,10 @@ class App extends Component {
           path="/product"
           component={Product}
           item={this.state.item}
-          callback={this.increaseCount.bind(this)}
+          callback={this.addItemToCart.bind(this)}
           count={this.state.count}
         />
-        <Route
-          exact
-          path="/cart"
-          component={ShoppingCart}
-          callback={this.addItemToCart.bind(this)}
-          cart={this.state.cart}
-        />
+        <Route exact path="/cart" component={ShoppingCart} cart={this.state.cart} size={this.state.size} />
       </div>
     );
   }
@@ -106,3 +97,6 @@ export default App;
 // App -> Route (count) -> ? Product (count) ? -> Navigation (count) -> Counter (count)
 
 // App -> Route (cart) -> ShoppingCart (cart)
+
+// App <- Route (callback) <- Product (callback) <- DropList (callback)
+// App -> Route (size) -> ShoppingCart (size)

@@ -6,7 +6,12 @@ import './Product.css';
 
 class Product extends Component {
   handleClick() {
-    this.props.callback(this.props.item);
+    console.log(`handleClick this.size=${this.size}`);
+    this.props.callback(this.props.item, this.size);
+  }
+
+  setSize(size) {
+    this.size = size;
   }
 
   render() {
@@ -36,7 +41,7 @@ class Product extends Component {
           </div>
           <div className="row">
             <span className="inline em25 margin-left-price">{this.props.item.price}</span>
-            <DropList />
+            <DropList setSize={this.setSize.bind(this)} />
             <i className="fas fa-2x fa-cart-plus" onClick={this.handleClick.bind(this)} />
           </div>
           <div className="margin-top margin-left">
