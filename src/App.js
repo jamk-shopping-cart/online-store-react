@@ -84,7 +84,14 @@ class App extends Component {
           callback={this.addItemToCart.bind(this)}
           count={this.state.count}
         />
-        <Route exact path="/cart" component={ShoppingCart} cart={this.state.cart} size={this.state.size} />
+        <Route
+          exact
+          path="/cart"
+          component={ShoppingCart}
+          cart={this.state.cart}
+          size={this.state.size}
+          count={this.state.count}
+        />
       </div>
     );
   }
