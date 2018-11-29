@@ -13,4 +13,5 @@
   padding-left: 0.35em;
   display: inline-block;
   z-index: 1;
+  animation-duration: 0.5s;
 }

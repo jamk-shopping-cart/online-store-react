@@ -27,7 +27,7 @@ class ShoppingCart extends Component {
             <div className="animated fadeIn delay-0.5s">
               {Object.keys(this.props.cart).map(index => (
                 <li key={index}>
-                  <div className="animated fadeIn delay-1s">
+                  <div className="animated fadeIn delay-0.5s">
                     <table>
                       <tbody>
                         <tr>
@@ -38,8 +38,8 @@ class ShoppingCart extends Component {
                           <td>{this.props.cart[index].item.price}</td>
                         </tr>
                         <tr>
-                          <td>Size {this.props.cart[index].size}</td>
-                          <td>QTY {this.props.cart[index].count}</td>
+                          <td>Size: {this.props.cart[index].size}</td>
+                          <td>QTY: {this.props.cart[index].count}</td>
                         </tr>
                       </tbody>
                     </table>
@@ -48,7 +48,7 @@ class ShoppingCart extends Component {
               ))}
             </div>
           </div>
-          <div className="margin-top margin-left animated fadeIn delay-1s">
+          <div className="margin-top margin-left animated fadeIn delay-0.5s">
             Items: €{this.totalPriceCart(this.props.cart)}
             {/* {Object.keys(this.props.cart).map(index => (
               <div key={index}>
@@ -57,15 +57,15 @@ class ShoppingCart extends Component {
               </div>
             ))} */}
           </div>
-          <div className="margin-top margin-left animated fadeIn delay-1s">
+          <div className="margin-top margin-left animated fadeIn delay-0.5s">
             Delivery:
             <span> €10</span>
           </div>
           <hr />
-          <div className="em2.5 margin-left margin-right margin-top animated fadeIn delay-1s">
+          <div className="em2.5 margin-left margin-right margin-top animated fadeIn delay-0.5s">
             Total: €{this.totalPriceCart(this.props.cart) + this.toDelivery()}
           </div>
-          <div className="margin-top col-12 text-center animated fadeIn delay-2s">
+          <div className="margin-top col-12 text-center animated fadeIn delay-1s">
             <button type="button" className="btn btn-primary">
               Continue to Pay
             </button>

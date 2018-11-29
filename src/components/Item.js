@@ -7,11 +7,12 @@ const Item = ({ item, callback }) => {
   // console.log(item);
   return (
     <div className="animated fadeIn delay-1s" onClick={callback.bind(this, item)}>
+      <p className="h4">{item.model}</p>
       <Link to="iteminfo">
         <img src={item.imgUrl} alt="shoes model" width={300} />
       </Link>
-      <h4>{item.model}</h4>
-      <h6>{item.price}</h6>
+      <p className="h5">{item.price}</p>
+      <hr />
     </div>
   );
 };
