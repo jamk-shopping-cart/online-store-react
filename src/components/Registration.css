@@ -1,8 +1,24 @@
-#regForm {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 10%;
+#email,
+#password,
+#confirm_password,
+#name,
+#surname,
+#phone,
+#address,
+#post,
+#username {
+  width: 100%;
+}
+
+#name {
+  margin-top: 2em;
+}
+
+label {
+  display: block;
+  margin: 2em auto;
+  text-align: center;
+  color: grey;
 }
 
 input[type='email'],
@@ -11,15 +27,11 @@ input[type='text'],
 input[type='tel'] {
   outline: none;
   height: 2em;
-  width: 70%;
+  width: 10%;
   margin: 0.5em auto;
 }
 
 input[type='submit'] {
-  margin-top: 2em;
-}
-
-#name {
   margin-top: 2em;
 }
 
@@ -31,14 +43,18 @@ input[type='submit'] {
   margin-top: 5%;
 }
 
-.grey {
+.width80 {
+  width: 80%;
+}
+
+/* .grey {
   color: grey;
 }
 
 .btn-primary {
   background-color: #00456b;
   color: #ff9628;
-}
+} */
 
 input:invalid:not(:placeholder-shown) {
   border-color: #b22222;

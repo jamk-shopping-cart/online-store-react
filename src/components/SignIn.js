@@ -11,8 +11,8 @@ class SignIn extends Component {
         </div>
         <div className="center">
           <form id="signForm">
-            <input id="si_username" type="text" placeholder="USERNAME" autoFocus required />
-            <input id="si_password" type="password" placeholder="PASSWORD" required />
+            <input id="username" type="text" placeholder="USERNAME" autoFocus required />
+            <input id="password" type="password" placeholder="PASSWORD" required />
           </form>
           <p className="em2 font400">Log In</p>
         </div>
