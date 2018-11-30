@@ -10,7 +10,8 @@
   width: 100%;
 }
 
-#name {
+#name,
+.width80 {
   margin-top: 2em;
 }
 
@@ -46,15 +47,6 @@ input[type='submit'] {
 .width80 {
   width: 80%;
 }
-
-/* .grey {
-  color: grey;
-}
-
-.btn-primary {
-  background-color: #00456b;
-  color: #ff9628;
-} */
 
 input:invalid:not(:placeholder-shown) {
   border-color: #b22222;
