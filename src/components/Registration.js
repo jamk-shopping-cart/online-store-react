@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navigation from './Navigation';
 import './Registration.css';
 
-class RegistrationForm extends Component {
+class Registration extends Component {
   render() {
     return (
       <React.Fragment>
@@ -30,4 +30,4 @@ class RegistrationForm extends Component {
   }
 }
 
-export default RegistrationForm;
+export default Registration;

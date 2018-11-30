@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from './Router';
 import './SignIn.css';
 
-class StartPage extends Component {
+class SignIn extends Component {
   render() {
     return (
       <div className="wrap">
@@ -26,4 +26,4 @@ class StartPage extends Component {
   }
 }
 
-export default StartPage;
+export default SignIn;
