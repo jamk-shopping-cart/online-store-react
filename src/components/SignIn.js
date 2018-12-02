@@ -9,7 +9,7 @@ class SignIn extends Component {
         <div className="top em3">
           <Link to="collection">ShoeFlex</Link>
         </div>
-        <div className="center">
+        <div className="center width80">
           <form id="signForm">
             <input id="username" type="text" placeholder="USERNAME" autoFocus required />
             <input id="password" type="password" placeholder="PASSWORD" required />
