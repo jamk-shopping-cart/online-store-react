@@ -204,12 +204,12 @@
       </tr>
         <tr>
         <td>Collection.js</td>
-        <td>I</td>
+        <td>Collection-komponentti määrittelee Collection-sivun sisällön, johon kuuluu komponentit navigation ja Itemlist. Collection-sivusto on ns. Pääsivu, johon päädytään oletuksena.</td>
         <td>Aleksi / Dmitry</td>
       </tr>
         <tr>
         <td>Counter.js</td>
-        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Komponentti, jota käytetään laskurina navigation-barissa. Laskuri kasvaa aina kun tuote lisätään ostoskoriin (sama tuote voi olla useita kertoja).</td>
         <td>Dmitry</td>
       </tr>
         <tr>
@@ -224,42 +224,42 @@
       </tr>
         <tr>
         <td>ItemInfo.js</td>
-        <td>Komponentti listaa parametrina saadun Item-komponentin jäsenen ja listaa sen tarkemmat tiedot sivustolle</td>
+        <td>Komponentti, joka listaa parametrina saadun Item-komponentin jäsenen ja listaa sen tarkemmat tiedot sivustolle dropdown-valikkona. Muita käytettyjä koponentteja ovat Navigation ja Droplist.</td>
         <td>Aleksi / Dmitry</td>
       </tr>
         <tr>
         <td>ItemList.js</td>
-        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>React-komponentti, jossa listataan JSON-tiedostosta löydetty tieto ja luodaan sen mukaan Item-komponentteja. JSON-file, jota projektissa käytetään löytyy <a href="'https://5bf089690756d2001311987d.mockapi.io/shoes">tästä</a>.</td>
         <td>Aleksi / Dmitry</td>
       </tr>
         <tr>
         <td>Navigation.js</td>
-        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>React-komponentti, jossa luodaan sivustolle Navigation-palkki. Palkki sijoittuu sivun yläosaan ja on käytössä kaikissa, paitsi kirjautumis-, rekisteröitymis- ja kansilehtinäkymässä.</td>
         <td>Dmitry</td>
       </tr>
         <tr>
         <td>Registration.js</td>
-        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Komponentti, joka luo rekisteröitymis-näkymän, johon pääsee kirjautumisnäkymästä. Input-kentät on pakko täyttää.</td>
         <td>Jouni</td>
       </tr>
         <tr>
         <td>Router.js</td>
-        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Komponentti, jonka avulla voidaan muuttaa sivunäkymää yhdestä toiseen. Käytännössä luo linkin, jota painamalla uusi näkymä avautuu.</td>
         <td>Dmitry</td>
       </tr>
         <tr>
         <td>ShoppingCart.js</td>
-        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Komponentti, jossa luodaan ostoskärry-näkymä. Laskee ostoskärryyn lisättyjen tuotteiden kokonaishinnan, sekä tuotehinnan, jos samaa tuotetta on lisätty useampi kappale. Tyhjässä ostoskärryssä ilmestyy teksti: "Shopping cart is empty".</td>
         <td>Dmitry / Leevi</td>
       </tr>
         <tr>
         <td>SignIn.js</td>
-        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Komponentti, joka luo Sign-in-näkymän, jossa käyttäjä kirjautuu sisään. Tässä versiossa log in ei vielä tee mitään, mutta se korvataan napilla kun kirjautumien saadaan toimiaan. Tästä näkymästä pääsee myös rekisteröitymisnäkymään.</td>
         <td>Jouni</td>
       </tr>
         <tr>
         <td>StartPage.js</td>
-        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Komponentti, joka luo Kansilehti-sivun näkymä. Kansilehti katoaa klikattaessa eikä ilmaannu uudestaan ilman sivun uudelleenlataamista.</td>
         <td>Dmitry / Jouni</td>
       </tr>
     </table>
