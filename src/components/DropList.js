@@ -1,5 +1,4 @@
 import React from 'react';
-import './DropList.css';
 import Dropdown from 'react-dropdown';
 
 const options = ['Size', 38, 39, 40, 41, 42, 43, 44, 45, 46, 47];

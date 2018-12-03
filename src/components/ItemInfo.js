@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from './Router';
 import Navigation from './Navigation';
 import DropList from './DropList';
-import './ItemInfo.css';
 
 class ItemInfo extends Component {
   handleClick() {
