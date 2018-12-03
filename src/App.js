@@ -10,7 +10,7 @@ import Registration from './components/Registration';
 import Collection from './components/Collection';
 import ItemInfo from './components/ItemInfo';
 import SignIn from './components/SignIn';
-import './App.css';
+import './App.scss';
 import ShoppingCart from './components/ShoppingCart';
 
 class App extends Component {
