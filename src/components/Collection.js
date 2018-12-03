@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from './Navigation';
 import ItemList from './ItemList';
-import './Collection.css';
 
 class Collection extends Component {
   render() {

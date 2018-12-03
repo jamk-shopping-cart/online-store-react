@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from './Router';
-import './Item.css';
 
 const Item = ({ item, callback }) => {
   // console.log(item);
