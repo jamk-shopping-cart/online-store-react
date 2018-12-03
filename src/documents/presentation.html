@@ -10,78 +10,102 @@
     />
   </head>
   <body class="container">
+    <p>3.12.2018</p>
     <h1>ShoeFlex-verkkosivuston dokumentaatio</h1>
+      <ul class="">
+          <li>Leevi Kukkonen</li>
+          <li>Aleksi Kuusjärvi</li>
+          <li>Dmitry Sklyarov</li>
+          <li>Jouni Timonen</li>
+      </ul>
     <p>
       ShoeFlex-verkkokauppasivusto on toteutettu neljän hengen porukalla kolmen opintojakson tavoitteiden
-      saavuttamiseksi yhdellä harjoitustyöllä. Tässä dokumentissa selvitämme, minkälaisen harjoitustyön teimme, mikä sen
+      saavuttamiseksi yhdellä harjoitustyöllä. Nämä kurssit ovat Web-Visualisointi, Web-ohjelmointi ja Web-palvelun määrittely ja suunnittelu. Tässä dokumentissa selvitämme, minkälaisen harjoitustyön teimme, mikä sen
       rakenne on, mitä tiedostoja se sisältää ja kuka meistä on tehnyt mitäkin.
     </p>
+      <p>
+          Projektimme on verkkokauppa ShoeFlex, jossa käyttäjä pystyy selaamaan sivustolle ulkoisesta JSON-tiedostosta (<a href="https://5bf089690756d2001311987d.mockapi.io/shoes">https://5bf089690756d2001311987d.mockapi.io/shoes</a>) tuotuja tuotetietoja, esim. nimen ja hinnan.       
+      </p>
+      <p>Sivuston rautalankamalli ja linkki Mockup-tiedostoon:</p>
+      <img alt="Sivuston Rautalankamalli" href="imgs/rautalanka.PNG"/>
+      <a href="https://www.fluidui.com/editor/live/preview/cF80ZmI1YWFiMDVhM2E0YWM1M2UzOWJlNzI1MWE0ZjYzZg==">https://www.fluidui.com/editor/live/preview/cF80ZmI1YWFiMDVhM2E0YWM1M2UzOWJlNzI1MWE0ZjYzZg==</a>
     <p>
       Sivuston perusrakenne on seuraava: Reactilla tuodaan sivustolle Components-kansiosta javascript-tiedostoja, jotka
-      luovat kaikki tarvittavat komponentit sivustolle. Samassa sijainnissa sijaitsevat komponenttien tyylitiedostot.
+        luovat kaikki tarvittavat komponentit index.html-sivustolle "root"-divin sisälle. 
     </p>
-    <p>Sivuston ulkonäkö on luotu hyödyntäen Bootstrap kirjastoja. Sama koskee tätä dokumenttia.</p>
+    <p>
+          Pääkomponentti on App.js, johon ladataan React-router ominaisuudella seuraavan sivun komponentit. Täten sivustolla ei tarvitse luoda aina uutta html-dokumenttia. Ostoskori-komponentissa tarvitaan local storage -ominaisuuksia, joilla sessiossa päivitetään ostoskori-ikoni, sekä päivitetään ostoskoriin lisätyt tuotteet.
+    </p>
+    <p>
+        Sivuston ulkonäkö on luotu hyödyntäen Bootstrap kirjastoja. Sama koskee tätä dokumenttia.
+    </p>
+    <h2> Ajankäyttö</h2>
+      <p>Projektiin käytettiin yhteensä n. 7 tuntia per henkilö yhteiseen suunnitteluun ja määrittelyyn, käyttöympäristön alustukseen n. 6 tuntia (github), itse ohjelmointiin ja moduulien luomiseen n. 23 tuntia per henkilö ja dokumentointiin 5h per henkilö. Yhteensä 41 tuntia kaiken kaikkiaan</p>
+    <h2>Arvio</h2>
+      <p>
+          Ryhmäläiset ovat tyytyväisiä aikaansaannokseen, sekä omaan työpanokseensa. Projektissa toiset ryhmäläiset painottivat enemmän dokumenttipuoleen ja toiset enemmän puhtaaseen ohjelmointiin, mutta lopulta kaikki kuitenkin tekivät kaikkia osa-alueita. Lopputyö on laaja, mutta voisi olla vielä kattavampi ryhmän koon huomioon ottaen.
+      </p>
+      <table class="table">
+          <tr>
+              <th>Nimi</th>
+              <th>Arvosanaehdotus</th>
+              <th>Perustelut</th>
+          </tr>
+           <tr>
+              <td>Aleksi</td>
+              <td>4</td>
+              <td>Teki oman osansa ohjelmoinnista. Keskittyi dokumentointiin.</td>
+          </tr>
+           <tr>
+              <td>Dmitry</td>
+              <td>5</td>
+              <td>Alusti git-projektin ja suurimman osan tiedostoista. Eniten koodausta koko porukasta.</td>
+          </tr>
+           <tr>
+              <td>Jouni</td>
+              <td>4</td>
+              <td>Ohjelmoi hyvin ja keksi hyviä ideoita, kunka asiat voitaisiin tehdä paremmin. Keksi suurimman osan sivuston ulkoasusta.</td>
+          </tr>
+           <tr>
+              <td>Leevi</td>
+              <td>4</td>
+              <td>Teki oman osansa ohjelmoinnista. Keskittyi suunnitteluun ja rajauksiin.</td>
+          </tr>
+      </table>
     <h2>Projektin tiedostot</h2>
     <table class="table">
       <tr>
         <th>Tiedosto</th>
         <th>Kuvaus</th>
         <th>Tekijät</th>
-        <td>Linkki</td>
       </tr>
       <tr>
         <td>package.json</td>
-        <td>asd</td>
-        <td>Dmitry</td>
+        <td>Projektin perustiedot, esim. versiotiedot, private-asetuksien arvot, importatut kirjastot ja muokkaajien nimet. Gitin automaattisesti projektin luomisessa generoima tiedosto.</td>
+        <td>Kaikki</td>
       </tr>
       <tr>
         <td>package-lock.json</td>
-        <td>asd</td>
-        <td>Dmitry</td>
-      </tr>
-      <tr>
-        <td>Documents</td>
-        <td>Tämän sivuston kansio.</td>
-        <td>Leevi</td>
+        <td>Automaattisesti generoitu json-tiedosto package-json tiedoston muokkaukseen npm:n toimesta.</td>
+        <td>Kaikki</td>
       </tr>
       <tr>
         <td>README.md</td>
         <td>
           Tekstitiedosto, joka kertoo kaikki tarvittavat npm-komennot ohjelman käynnistämiseen käyttäen
-          Node.js-kirjastoa. Tarkoitettu sekä käyttäjille että ohjelman koodajille.
+          Node.js-kirjastoa. Tarkoitettu sekä käyttäjille että ohjelman koodaajille.
         </td>
         <td>Dmitry</td>
       </tr>
       <tr>
         <td>public</td>
         <td>Julkisten tiedostojen kansio.</td>
-        <td>Dmitry</td>
+        <td>Kaikki</td>
       </tr>
       <tr>
         <td>src</td>
         <td>Tämän sivuston kansio.</td>
-        <td>Leevi</td>
-      </tr>
-    </table>
-
-    <h3>Documents-kansio</h3>
-    <table class="table">
-      <tr>
-        <th>Tiedosto</th>
-        <th>Kuvaus</th>
-        <th>Tekijät</th>
-        <td>Linkki</td>
-      </tr>
-
-      <tr>
-        <td>presentation.html</td>
-        <td>Tämän sivuston html-tiedosto. Käyttää Bootstrapia</td>
-        <td>Leevi</td>
-      </tr>
-      <tr>
-        <td>presentation.css</td>
-        <td>Tämän sivun tyylitiedosto.</td>
-        <td>Leevi</td>
+        <td>Kaikki</td>
       </tr>
     </table>
 
@@ -91,7 +115,6 @@
         <th>Tiedosto</th>
         <th>Kuvaus</th>
         <th>Tekijät</th>
-        <td>Linkki</td>
       </tr>
       <tr>
         <td>index.html</td>
@@ -109,31 +132,30 @@
         <th>Tiedosto</th>
         <th>Kuvaus</th>
         <th>Tekijät</th>
-        <td>Linkki</td>
       </tr>
       <tr>
-        <td>App.css</td>
+        <td>App.scss</td>
         <td>Pääohjelman tyylitiedosto.</td>
-        <td>Dmitry</td>
+        <td>Kaikki</td>
       </tr>
       <tr>
         <td>App.js</td>
         <td>
           React-komponentti, joka käsittää pääsivuston. Lataa itseensä komponenttikansion skriptit, tyylitiedostot,
-          bootstrapin animointiskriptit. React-route-ominaisuudella voidaan ladata oikea sivusto komponettikansiosta.
+          bootstrapin animointiskriptit. React-route-ominaisuudella voidaan ladata oikea sivusto komponenttikansiosta.
         </td>
-        <td>Dmitry</td>
+        <td>Kaikki</td>
       </tr>
       <tr>
         <td>index.css</td>
         <td>
-          Aloitussivuston tyylitiedosto. Lataa fontit,nollaa marginaalit ja paddingin sekä asettaa code-luokan fontin.
+          Aloitussivuston tyylitiedosto. Lataa fontit, nollaa marginaalit ja paddingin sekä asettaa code-luokan fontin.
         </td>
         <td>Dmitry</td>
       </tr>
       <tr>
         <td>index.js</td>
-        <td>Alkusivuston tiedosto, jossa ladataan react ja App.js sivuston käynnistämiseen.</td>
+        <td>Alkusivuston tiedosto, jossa ladataan React ja App.js sivuston käynnistämiseen.</td>
         <td>Dmitry</td>
       </tr>
       <tr>
@@ -151,6 +173,94 @@
           Jokaisella komponentilla on aina oma javascript ja css-tiedosto omalla nimellään.
         </td>
         <td>Dmitry</td>
+      </tr>  <tr>
+        <td>documents</td>
+        <td>
+          Tämän sivuston sisältävä kansio. 
+        </td>
+        <td>Leevi</td>
+      </tr>
+    </table>
+      <h3>documents-kansio</h3>
+    <table class="table">
+      <tr>
+        <th>Tiedosto</th>
+        <th>Kuvaus</th>
+        <th>Tekijät</th>
+      </tr>
+
+      <tr>
+        <td>presentation.html</td>
+        <td>Tämän sivuston html-tiedosto. Käyttää Bootstrapia tyylimäärittelyihin.</td>
+        <td>Aleksi / Leevi</td>
+      </tr>
+      </table>
+     <h3>components-kansio</h3>
+    <table class="table">
+      <tr>
+        <th>Tiedosto</th>
+        <th>Kuvaus</th>
+        <th>Tekijät</th>
+      </tr>
+        <tr>
+        <td>Collection.js</td>
+        <td>I</td>
+        <td>Aleksi / Dmitry</td>
+      </tr>
+        <tr>
+        <td>Counter.js</td>
+        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Dmitry</td>
+      </tr>
+        <tr>
+        <td>DropList.js</td>
+        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Jouni</td>
+      </tr>
+        <tr>
+        <td>Item.js</td>
+        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Dmitry</td>
+      </tr>
+        <tr>
+        <td>ItemInfo.js</td>
+        <td>Komponentti listaa parametrina saadun Item-komponentin jäsenen ja listaa sen tarkemmat tiedot sivustolle</td>
+        <td>Aleksi / Dmitry</td>
+      </tr>
+        <tr>
+        <td>ItemList.js</td>
+        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Aleksi / Dmitry</td>
+      </tr>
+        <tr>
+        <td>Navigation.js</td>
+        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Dmitry</td>
+      </tr>
+        <tr>
+        <td>Registration.js</td>
+        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Jouni</td>
+      </tr>
+        <tr>
+        <td>Router.js</td>
+        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Dmitry</td>
+      </tr>
+        <tr>
+        <td>ShoppingCart.js</td>
+        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Dmitry / Leevi</td>
+      </tr>
+        <tr>
+        <td>SignIn.js</td>
+        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Jouni</td>
+      </tr>
+        <tr>
+        <td>StartPage.js</td>
+        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Dmitry / Jouni</td>
       </tr>
     </table>
   </body>
