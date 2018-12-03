@@ -2,3 +2,310 @@ body {
   background-color: #fff;
   font-size: 100%;
 }
+
+.wrap {
+  background-color: #00456b;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.center {
+  /* text-transform: uppercase; */
+  color: #ff9628;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bottom {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  position: absolute;
+  bottom: 20%;
+  text-align: center;
+  /* margin-left: -140px;
+  left: 50%; */
+}
+
+.font100 {
+  font-weight: 100;
+}
+
+.font400 {
+  font-weight: 400;
+}
+
+.fa-chevron-down {
+  color: white;
+}
+
+.em3 {
+  font-size: 3em;
+}
+
+.em15 {
+  font-size: 1.5em;
+}
+
+.top {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: #ff9628;
+  position: absolute;
+  top: 2%;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.em1 {
+  font-size: 1em;
+}
+
+#email,
+#password,
+#confirm_password,
+#name,
+#surname,
+#phone,
+#address,
+#post,
+#username {
+  width: 100%;
+  display: block;
+}
+
+#name,
+.width80 {
+  margin-top: 2em;
+}
+
+#email {
+  margin-top: 2em;
+}
+
+label {
+  display: block;
+  margin: 0em auto 1.5em auto;
+  text-align: center;
+  color: grey;
+}
+
+input[type='email'],
+input[type='password'],
+input[type='text'],
+input[type='tel'] {
+  outline: none;
+  height: 2em;
+  width: 10%;
+  margin: 0.8em auto;
+  border-radius: 4px;
+  border: 0;
+  box-shadow: none;
+}
+
+input[type='submit'] {
+  margin-top: 2em;
+}
+
+.left10 {
+  margin-left: 10%;
+}
+
+.top5 {
+  margin-top: 5%;
+}
+
+.width80 {
+  width: 80%;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: #b22222;
+}
+
+input:valid:not(:placeholder-shown) {
+  border-color: #008000;
+}
+
+input[list='area']:valid,
+input[list='area']:invalid {
+  border-color: initial;
+}
+
+input[type='submit']:valid,
+input[type='submit']:invalid {
+  border-color: #000;
+}
+
+::-webkit-input-placeholder {
+  color: grey;
+  font-size: 1.1em;
+  padding-left: 1em;
+}
+
+::-moz-placeholder {
+  color: grey;
+  font-size: 1.1em;
+}
+
+:-ms-input-placeholder {
+  color: grey;
+  font-size: 1.1em;
+}
+
+:-moz-placeholder {
+  color: grey;
+  font-size: 1.1;
+}
+
+nav {
+  background-color: #00456b;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  width: 100%;
+}
+
+a {
+  color: #ff9628;
+}
+
+.em2 {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.em21 {
+  font-size: 2.5em;
+  margin-bottom: 0;
+}
+
+.fa-shopping-cart {
+  position: relative;
+}
+
+.hidden {
+  height: 1.5em;
+  width: 1.5em;
+  position: relative;
+  display: inline-block;
+  visibility: hidden;
+}
+
+.margin-top {
+  margin-top: 1em;
+}
+
+.margin-left {
+  margin-left: 3em;
+}
+
+.margin-right {
+  margin-right: 2.5em;
+}
+
+.margin-left-price {
+  margin-left: 1em;
+}
+
+.em12 {
+  font-size: 1.2em;
+}
+
+.em25 {
+  font-size: 2.5em;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.fa-cart-plus {
+  margin: 0 1em;
+  background-color: #00456b;
+  color: #ff9628;
+  padding: 0.4em 0.35em;
+  border-radius: 2em;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.h4,
+.h5 {
+  text-align: center;
+  font-weight: 200;
+}
+
+.h4 {
+  font-size: 180%;
+}
+
+.h5 {
+  font-size: 140%;
+}
+
+.Dropdown-root {
+  display: inline-block;
+  margin-left: 4em;
+}
+
+.Dropdown-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5em;
+  height: 3em;
+}
+
+.Dropdown-placeholder {
+  padding-left: 1.5em;
+}
+
+.circle {
+  background-color: #fff;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 1.5em;
+  position: relative;
+  left: 2.2em;
+  bottom: 1.4em;
+  border: 0.1em solid #ff9628;
+  background-color: #00456b;
+  color: #ff9628;
+  font-weight: 400;
+  padding-left: 0.35em;
+  display: inline-block;
+  z-index: 1;
+  animation-duration: 0.5s;
+}
+
+#collection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#collectionHeader {
+  margin-top: 5%;
+  font-size: 3em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from './Router';
-import './Registration.css';
 
 class Registration extends Component {
   render() {

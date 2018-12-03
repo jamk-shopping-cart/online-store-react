@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from './Router';
-import './StartPage.css';
 
 class StartPage extends Component {
   render() {
