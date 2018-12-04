@@ -4,11 +4,11 @@ import { Link } from './Router';
 class Registration extends Component {
   render() {
     return (
-      <div className="wrap">
-        <div className="top em3">
+      <div className="wrap container-fluid d-flex h-100">
+        <div className="align-self-center font-light top em3">
           <Link to="collection">ShoeFlex</Link>
         </div>
-        <div className="width80">
+        <div className="align-self-center width80">
           <form>
             <input id="email" type="email" placeholder="Email" autoFocus required />
             <input id="password" type="password" placeholder="Password" required />
