@@ -26,19 +26,20 @@ class ShoppingCart extends Component {
             <div className="animated fadeIn delay-0.5s">
               {Object.keys(this.props.cart).map(index => (
                 <li key={index}>
-                  <div className="animated fadeIn delay-0.5s">
+                  <div className="animated fadeIn delay-0.5s border border-dark rounded pr-2 py-2 mt-3">
                     <table>
                       <tbody>
                         <tr>
                           <td rowSpan="2">
-                            <img src={this.props.cart[index].item.imgUrl} alt="shoes model" width={200} />
+                            <img className="mr-3" src={this.props.cart[index].item.imgUrl} alt="shoes model" width={120} />
                           </td>
-                          <td>{this.props.cart[index].item.model}</td>
-                          <td>{this.props.cart[index].item.price}</td>
+                          <td className="pr-3">{this.props.cart[index].item.model}</td>
+                          <td className="pr-2">{this.props.cart[index].item.price}</td>
+                          <td><i className="far fa-times-circle fa-2x float-right"></i></td>
                         </tr>
                         <tr>
-                          <td>Size: {this.props.cart[index].size}</td>
-                          <td>QTY: {this.props.cart[index].count}</td>
+                          <td className="pr-3">Size: {this.props.cart[index].size}</td>
+                          <td className="pr-2">QTY: {this.props.cart[index].count}</td>
                         </tr>
                       </tbody>
                     </table>
@@ -47,7 +48,11 @@ class ShoppingCart extends Component {
               ))}
             </div>
           </div>
-          <div className="margin-top margin-left animated fadeIn delay-0.5s">
+          <div className="em15 mx-5 mt-5 animated fadeIn delay-0.5s">
+            Total: €{this.totalPriceCart(this.props.cart) + this.toDelivery()}
+          </div>
+          <hr />
+          <div className="mt-3 ml-5 animated fadeIn delay-0.5s">
             Items: €{this.totalPriceCart(this.props.cart)}
             {/* {Object.keys(this.props.cart).map(index => (
               <div key={index}>
@@ -56,16 +61,12 @@ class ShoppingCart extends Component {
               </div>
             ))} */}
           </div>
-          <div className="margin-top margin-left animated fadeIn delay-0.5s">
+          <div className="pt-3 ml-5 animated fadeIn delay-0.5s">
             Delivery:
             <span> €10</span>
           </div>
-          <hr />
-          <div className="em2.5 margin-left margin-right margin-top animated fadeIn delay-0.5s">
-            Total: €{this.totalPriceCart(this.props.cart) + this.toDelivery()}
-          </div>
-          <div className="margin-top col-12 text-center animated fadeIn delay-1s">
-            <button type="button" className="btn btn-primary">
+          <div className="mt-5 col-12 text-center animated fadeIn delay-1s">
+            <button type="button" className="btn blueBG orangeText">
               Continue to Pay
             </button>
           </div>
