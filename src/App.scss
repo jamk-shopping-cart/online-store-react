@@ -9,8 +9,6 @@ body {
 .wrap {
   background-color: $blue-color;
   position: fixed;
-  justify-content: center;
-  flex-direction: column;
 
   .title {
     color: $orange-color;
@@ -19,9 +17,6 @@ body {
   .subtitle {
     font-weight: $font-weight-bold;
     color: $white-color;
-    position: absolute;
-    bottom: calc(25% - 2.5em); // @media (max-height: 300px) { ... }?!
-    text-align: center;
   }
 
   .top-title {
