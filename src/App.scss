@@ -43,11 +43,11 @@ body {
 }
 
 .em3 {
-  font-size: 3em;
+  font-size: $font-size-30;
 }
 
 .em15 {
-  font-size: 1.5em;
+  font-size: $font-size-15;
 }
 
 .top {
@@ -64,7 +64,7 @@ p {
 }
 
 .em1 {
-  font-size: 1em;
+  font-size: $font-size-10;
 }
 
 #email {
@@ -210,7 +210,7 @@ input[list='area'] {
 ::-moz-placeholder,
 :-ms-input-placeholder {
   color: $grey-color;
-  font-size: 1.1em;
+  font-size: $font-size-11;
 }
 
 nav {
@@ -225,12 +225,12 @@ a {
 }
 
 .em2 {
-  font-size: 2em;
+  font-size: $font-size-20;
   margin-bottom: 0;
 }
 
 .em21 {
-  font-size: 2.5em;
+  font-size: $font-size-25;
   margin-bottom: 0;
 }
 
@@ -263,10 +263,10 @@ a {
 }
 
 .em12 {
-  font-size: 1.2em;
+  font-size: $font-size-12;
 }
 .em25 {
-  font-size: 2.5em;
+  font-size: $font-size-25;
 }
 
 .justify {
@@ -298,13 +298,13 @@ li {
 .h4 {
   text-align: center;
   font-weight: 200;
-  font-size: 180%;
+  font-size: 180%; // check
 }
 
 .h5 {
   text-align: center;
   font-weight: 200;
-  font-size: 140%;
+  font-size: 140%; // check
 }
 
 .Dropdown-root {
@@ -349,7 +349,7 @@ li {
 
 #collectionHeader {
   margin-top: 5%;
-  font-size: 3em;
+  font-size: $font-size-30;
   font-family: $font-family;
   font-weight: 200;
 }
