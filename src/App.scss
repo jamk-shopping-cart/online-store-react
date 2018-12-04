@@ -12,11 +12,17 @@ body {
 
   .title {
     color: $orange-color;
+    font-size: $font-size-7;
   }
 
   .subtitle {
     font-weight: $font-weight-bold;
     color: $white-color;
+    font-size: $font-size-4;
+    .fa-chevron-down {
+      color: $white-color;
+      font-size: $font-size-4;
+    }
   }
 
   .top-title {
@@ -32,10 +38,6 @@ body {
 
 .font-bold {
   font-weight: $font-weight-normal;
-}
-
-.fa-chevron-down {
-  color: $white-color;
 }
 
 .em3 {
