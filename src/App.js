@@ -3,6 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import 'roboto-fontface';
 import 'animate.css/animate.css';
 import 'react-dropdown/style.css';
+import 'sass-loader/lib/loader.js';
 import React, { Component } from 'react';
 import { Route } from './components/Router';
 import StartPage from './components/StartPage';
@@ -10,8 +11,8 @@ import Registration from './components/Registration';
 import Collection from './components/Collection';
 import ItemInfo from './components/ItemInfo';
 import SignIn from './components/SignIn';
-import './App.scss';
 import ShoppingCart from './components/ShoppingCart';
+import './App.scss';
 
 class App extends Component {
   constructor(props) {
