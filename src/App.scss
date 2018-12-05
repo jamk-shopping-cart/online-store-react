@@ -14,8 +14,9 @@ body {
 //____________________________________________________________________________________________________________
 // style for StartPage, SignIn and Registration (don't remove!)
 
-.wrap {
+.container-fluid {
   background-color: $blue-color;
+  min-height: 100vh;
 
   .title {
     color: $orange-color;
@@ -39,7 +40,7 @@ body {
   .form {
     input {
       outline: none;
-      height: 2em;
+      line-height: 2em;
       &:invalid {
         &:not(:placeholder-shown) {
           border-color: $notvalid-color;
