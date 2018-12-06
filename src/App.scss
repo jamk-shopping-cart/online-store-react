@@ -120,6 +120,19 @@ nav {
 }
 
 //___________________________________________________________________________________________________________
+// style for Item
+
+.model {
+  font-weight: $font-weight-normal;
+  font-size: $font-size-5;
+}
+
+.price {
+  font-weight: $font-weight-normal;
+  font-size: $font-size-3;
+}
+
+//___________________________________________________________________________________________________________
 // style for all other components (PITÄÄ KORJATA!)
 
 .font-light {
@@ -223,18 +236,6 @@ ul {
 
 li {
   list-style-type: none;
-}
-
-.h4 {
-  text-align: center;
-  font-weight: $font-weight-normal;
-  font-size: 180%; // check
-}
-
-.h5 {
-  text-align: center;
-  font-weight: $font-weight-normal;
-  font-size: 140%; // check
 }
 
 .Dropdown-root {
