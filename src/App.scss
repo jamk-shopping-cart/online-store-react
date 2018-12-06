@@ -81,7 +81,7 @@ body {
   }
 }
 //___________________________________________________________________________________________________________
-// style for Navigation:
+// style for Navigation and Counter:
 
 nav {
   background-color: $blue-color;
@@ -97,18 +97,14 @@ nav {
   }
 
   .circle {
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 1.5em;
-    position: relative;
-    left: 2.2em;
-    bottom: 1.4em;
-    border: 0.1em solid $orange-color;
+    border: 0.12em solid $orange-color;
     background-color: $blue-color;
     color: $orange-color;
+    font-size: $font-size-circle;
     font-weight: $font-weight-bold;
-    padding-left: 0.35em;
-    display: inline-block;
+    position: absolute;
+    top: -0.6em;
+    right: 0;
     z-index: 1;
     animation-duration: 0.5s;
   }

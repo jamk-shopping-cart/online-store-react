@@ -45,9 +45,10 @@ class Navigation extends Component {
                 </Link>
               </div>
               <div className="col-2 text-center">
-                <Counter count={this.props.count} />
                 <Link to="cart" className="navbar-brand">
-                  <i className="fas fa-shopping-cart" />
+                  <i className="fas fa-shopping-cart">
+                    <Counter count={this.props.count} />
+                  </i>
                 </Link>
               </div>
             </nav>
