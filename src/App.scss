@@ -81,8 +81,41 @@ body {
   }
 }
 //___________________________________________________________________________________________________________
+// style for Navigation:
 
-// style for all other components (pitää korjata!)
+nav {
+  background-color: $blue-color;
+  font-weight: $font-weight-light;
+
+  .fa-shopping-cart,
+  .fa-user {
+    font-size: $font-size-5;
+  }
+
+  .header {
+    font-size: $font-size-6;
+  }
+
+  .circle {
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1.5em;
+    position: relative;
+    left: 2.2em;
+    bottom: 1.4em;
+    border: 0.1em solid $orange-color;
+    background-color: $blue-color;
+    color: $orange-color;
+    font-weight: $font-weight-bold;
+    padding-left: 0.35em;
+    display: inline-block;
+    z-index: 1;
+    animation-duration: 0.5s;
+  }
+}
+
+//___________________________________________________________________________________________________________
+// style for all other components (PITÄÄ KORJATA!)
 
 .font-light {
   font-weight: $font-weight-light;
@@ -114,12 +147,6 @@ p {
 
 .top5 {
   margin-top: 5%;
-}
-
-nav {
-  background-color: $blue-color;
-  font-weight: $font-weight-light;
-  width: 100%;
 }
 
 .em2 {
@@ -220,23 +247,6 @@ li {
 
 .Dropdown-placeholder {
   padding-left: 1.5em;
-}
-
-.circle {
-  height: 1.5em;
-  width: 1.5em;
-  border-radius: 1.5em;
-  position: relative;
-  left: 2.2em;
-  bottom: 1.4em;
-  border: 0.1em solid $orange-color;
-  background-color: $blue-color;
-  color: $orange-color;
-  font-weight: $font-weight-bold;
-  padding-left: 0.35em;
-  display: inline-block;
-  z-index: 1;
-  animation-duration: 0.5s;
 }
 
 #collection {

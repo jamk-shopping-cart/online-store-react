@@ -7,45 +7,52 @@ class Navigation extends Component {
     // console.log('Navigation: this.props.count:', this.props.count);
     if (!this.props.count) {
       return (
-        <React.Fragment>
-          <nav className="navbar navbar-light">
-            <Link to="signin" className="navbar-brand text-warning">
-              <i className="fas fa-user em2" />
-            </Link>
-            <Link to="collection" className="navbar-brand text-warning">
-              <p className="em21">ShoeFlex</p>
-            </Link>
-            <div>
-              <Link to="cart" className="navbar-brand text-warning">
-                <i className="fas fa-shopping-cart em2" />
-              </Link>
-            </div>
-          </nav>
-        </React.Fragment>
+        <div className="container-full">
+          <div className="row">
+            <nav className="navbar navbar-light w-100">
+              <div className="col-2 text-center">
+                <Link to="signin" className="navbar-brand">
+                  <i className="fas fa-user" />
+                </Link>
+              </div>
+              <div className="col-8 text-center">
+                <Link to="collection" className="navbar-brand">
+                  <span className="header">ShoeFlex</span>
+                </Link>
+              </div>
+              <div className="col-2 text-center">
+                <Link to="cart" className="navbar-brand">
+                  <i className="fas fa-shopping-cart" />
+                </Link>
+              </div>
+            </nav>
+          </div>
+        </div>
       );
     } else {
       return (
-        <React.Fragment>
-          <nav className="navbar navbar-light">
-            <div>
-              <Link to="signin" className="navbar-brand text-warning">
-                <i className="fas fa-user em2" />
-              </Link>
-              <a href="/" className="hidden">
-                hidden
-              </a>
-            </div>
-            <Link to="collection" className="navbar-brand text-warning">
-              <p className="em21">ShoeFlex</p>
-            </Link>
-            <div>
-              <Counter count={this.props.count} />
-              <Link to="cart" className="navbar-brand text-warning">
-                <i className="fas fa-shopping-cart em2" />
-              </Link>
-            </div>
-          </nav>
-        </React.Fragment>
+        <div className="container-full">
+          <div className="row">
+            <nav className="navbar navbar-light w-100">
+              <div className="col-2 text-center">
+                <Link to="signin" className="navbar-brand">
+                  <i className="fas fa-user" />
+                </Link>
+              </div>
+              <div className="col-8 text-center">
+                <Link to="collection" className="navbar-brand">
+                  <span className="header">ShoeFlex</span>
+                </Link>
+              </div>
+              <div className="col-2 text-center">
+                <Counter count={this.props.count} />
+                <Link to="cart" className="navbar-brand">
+                  <i className="fas fa-shopping-cart" />
+                </Link>
+              </div>
+            </nav>
+          </div>
+        </div>
       );
     }
   }
