@@ -9,7 +9,7 @@ class Navigation extends Component {
       return (
         <div className="container-full">
           <div className="row">
-            <nav className="navbar navbar-light w-100">
+            <nav className="navbar navbar-light fixed-top w-100 ">
               <div className="col-2 text-center">
                 <Link to="signin" className="navbar-brand">
                   <i className="fas fa-user" />
@@ -33,7 +33,7 @@ class Navigation extends Component {
       return (
         <div className="container-full">
           <div className="row">
-            <nav className="navbar navbar-light w-100">
+            <nav className="navbar navbar-light fixed-top w-100">
               <div className="col-2 text-center">
                 <Link to="signin" className="navbar-brand">
                   <i className="fas fa-user" />
