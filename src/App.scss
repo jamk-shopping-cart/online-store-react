@@ -148,6 +148,24 @@ nav {
 }
 
 //___________________________________________________________________________________________________________
+// style for ShoppingCart
+
+.top {
+  margin-top: 6em;
+}
+
+.fa-times-circle {
+  position: absolute;
+  right: 1em;
+  z-index: 1;
+}
+
+.btn {
+  background-color: $blue-color;
+  color: $orange-color;
+}
+
+//___________________________________________________________________________________________________________
 // style for all other components (PITÄÄ KORJATA!)
 
 .font-light {
