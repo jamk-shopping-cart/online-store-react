@@ -1,6 +1,6 @@
 @import 'src/scss/_variables.scss';
 
-// general style for all components
+// general style for all components:
 body {
   background-color: $white-color;
   font-family: $font-family;
@@ -25,7 +25,7 @@ body {
   }
 }
 
-// style for StartPage, SignIn and Registration (don't remove!)
+// style for StartPage, SignIn and Registration:
 .container-fluid {
   background-color: $blue-color;
   min-height: 100vh;
@@ -125,7 +125,7 @@ nav {
   }
 }
 
-// style for Collection
+// style for Collection:
 .top {
   margin-top: 6em;
 }
@@ -135,7 +135,7 @@ nav {
   font-weight: $font-weight-normal;
 }
 
-// style for Item
+// style for Item:
 .model {
   font-weight: $font-weight-normal;
   font-size: $font-size-5;
@@ -146,7 +146,7 @@ nav {
   font-size: $font-size-3;
 }
 
-// style for ItemInfo
+// style for ItemInfo:
 .feature {
   font-weight: $font-weight-highbold;
 }
@@ -160,7 +160,7 @@ nav {
   color: $orange-color;
 }
 
-// style for ShoppingCart
+// style for ShoppingCart:
 .top {
   margin-top: 6em;
 }
@@ -176,8 +176,7 @@ nav {
   color: $orange-color;
 }
 
-// style for DropList
-
+// style for DropList:
 .Dropdown-root {
   display: inline-block;
   margin-left: 4em;
