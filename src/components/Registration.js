@@ -9,7 +9,7 @@ class Registration extends Component {
           <div className="title col-12 top-title align-self-start text-center">
             <Link to="collection">ShoeFlex</Link>
           </div>
-          <div className="form col-12 align-self-center">
+          <div className="form col-12 col-md-8 col-lg-6 align-self-center">
             <form>
               <input
                 id="email"
@@ -74,7 +74,7 @@ class Registration extends Component {
               </label>
             </form>
           </div>
-          <div className="subtitle col-12 align-self-center">
+          <div className="subtitle col-12 align-self-center text-center">
             <Link to="signin">
               <p>Create an account</p>
             </Link>

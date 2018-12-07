@@ -4,18 +4,18 @@ import { Link } from './Router';
 class SignIn extends Component {
   render() {
     return (
-      <div className="container-fluid d-flex">
+      <div className="container-fluid d-flex text-center">
         <div className="row w-100 mx-auto">
           <div className="title col-12 top-title align-self-start text-center">
             <Link to="collection">ShoeFlex</Link>
           </div>
-          <div className="form col-12 align-self-center">
+          <div className="form col-12 col-md-8 col-lg-6 align-self-center">
             <form>
               <input
                 id="username"
                 className="w-100 d-block mb-2 pl-3 rounded border-0"
                 type="text"
-                placeholder="USERNAME"
+                placeholder="Username"
                 autoFocus
                 required
               />
@@ -23,7 +23,7 @@ class SignIn extends Component {
                 id="password"
                 className="w-100 d-block pl-3 rounded border-0"
                 type="password"
-                placeholder="PASSWORD"
+                placeholder="Password"
                 required
               />
             </form>

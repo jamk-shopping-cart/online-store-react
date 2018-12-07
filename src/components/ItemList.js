@@ -30,13 +30,13 @@ class ItemList extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <ul>
-          {items.map((item, index) => (
-            <li key={item.id}>
-              <Item key={index} item={item} callback={callback} />
-            </li>
-          ))}
-        </ul>
+          <ul>
+            {items.map((item, index) => (
+              <li key={item.id}>
+                <Item key={index} item={item} callback={callback} />
+              </li>
+            ))}
+          </ul>
       );
     }
   }
