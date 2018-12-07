@@ -8,8 +8,15 @@ class Collection extends Component {
     return (
       <React.Fragment>
         <Navigation count={this.props.count} />
+<<<<<<< HEAD
         <div className="container text-center top">
           <div className="animated pulse mb-2">2018 Collection</div>
+=======
+        <div id="collection" className="container">
+          <div id="collectionHeader" className="animated pulse">
+            2018 Collection
+          </div>
+>>>>>>> 314d477856682d2a286a098f56d9b871b10abc68
           <ItemList callback={this.props.callback} />
         </div>
       </React.Fragment>
