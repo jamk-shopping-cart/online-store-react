@@ -5,7 +5,7 @@ class Registration extends Component {
   render() {
     return (
       <div className="container-fluid d-flex">
-        <div className="row w-100 ml-auto mr-auto">
+        <div className="row w-100 mx-auto">
           <div className="title col-12 top-title align-self-start text-center">
             <Link to="collection">ShoeFlex</Link>
           </div>
