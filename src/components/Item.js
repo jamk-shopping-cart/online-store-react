@@ -5,13 +5,13 @@ import { Link } from './Router';
 const Item = ({ item, callback }) => {
   // console.log(item);
   return (
-    <div className="container-full d-flex animated fadeIn delay-1s" onClick={callback.bind(this, item)}>
+    <div className="container d-flex animated fadeIn delay-1s" onClick={callback.bind(this, item)}>
       <div className="row w-100 ml-auto mr-auto">
-        <p className="model col-12">{item.model}</p>
-        <Link className="col-12" to="iteminfo">
+        <p className="model col-12 col-lg-4">{item.model}</p>
+        <Link className="col-12 col-lg-4" to="iteminfo">
           <img src={item.imgUrl} alt="shoes model" width={300} />
         </Link>
-        <p className="price col-12">{item.price}</p>
+        <p className="price col-12 col-lg-4">{item.price}</p>
         <div className="col-8">
           <hr />
         </div>
