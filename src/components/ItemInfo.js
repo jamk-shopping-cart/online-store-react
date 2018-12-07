@@ -41,7 +41,7 @@ class ItemInfo extends Component {
             <div className="row ml-2">
               <span className="model">{this.props.item.price}</span>
               <DropList setSize={this.setSize.bind(this)} />
-              <i className="fas fa-2x fa-cart-plus" onClick={this.handleClick.bind(this)} />
+              <i className="fas fa-2x fa-cart-plus rounded-circle ml-3 p-3" onClick={this.handleClick.bind(this)} />
             </div>
             <div className="mt-3 mx-5">
               <div>

@@ -1,6 +1,6 @@
 @import 'src/scss/_variables.scss';
 
-// style for all components (don't remove!)
+// general style for all components
 body {
   background-color: $white-color;
   font-family: $font-family;
@@ -9,11 +9,23 @@ body {
   a {
     color: $orange-color;
   }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-//____________________________________________________________________________________________________________
 // style for StartPage, SignIn and Registration (don't remove!)
-
 .container-fluid {
   background-color: $blue-color;
   min-height: 100vh;
@@ -81,12 +93,14 @@ body {
   }
 }
 
-//___________________________________________________________________________________________________________
 // style for Navigation and Counter:
-
 nav {
   background-color: $blue-color;
   font-weight: $font-weight-light;
+
+  .fa-shopping-cart {
+    position: relative;
+  }
 
   .fa-shopping-cart,
   .fa-user {
@@ -111,9 +125,7 @@ nav {
   }
 }
 
-//___________________________________________________________________________________________________________
 // style for Collection
-
 .top {
   margin-top: 6em;
 }
@@ -123,9 +135,7 @@ nav {
   font-weight: $font-weight-normal;
 }
 
-//___________________________________________________________________________________________________________
 // style for Item
-
 .model {
   font-weight: $font-weight-normal;
   font-size: $font-size-5;
@@ -136,9 +146,7 @@ nav {
   font-size: $font-size-3;
 }
 
-//___________________________________________________________________________________________________________
 // style for ItemInfo
-
 .feature {
   font-weight: $font-weight-highbold;
 }
@@ -147,9 +155,12 @@ nav {
   font-size: $font-size-3;
 }
 
-//___________________________________________________________________________________________________________
-// style for ShoppingCart
+.fa-cart-plus {
+  background-color: $blue-color;
+  color: $orange-color;
+}
 
+// style for ShoppingCart
 .top {
   margin-top: 6em;
 }
@@ -165,111 +176,7 @@ nav {
   color: $orange-color;
 }
 
-//___________________________________________________________________________________________________________
-// style for all other components (PITÄÄ KORJATA!)
-
-.font-light {
-  font-weight: $font-weight-light;
-}
-
-.font-bold {
-  font-weight: $font-weight-normal;
-}
-
-.em3 {
-  font-size: $font-size-7;
-}
-
-.em15 {
-  font-size: $font-size-4;
-}
-
-p {
-  text-align: center;
-}
-
-.em1 {
-  font-size: $font-size-1;
-}
-
-.left10 {
-  margin-left: 10%;
-}
-
-.top5 {
-  margin-top: 5%;
-}
-
-.em2 {
-  font-size: $font-size-5;
-  margin-bottom: 0;
-}
-
-.em21 {
-  font-size: $font-size-6;
-  margin-bottom: 0;
-}
-
-.fa-shopping-cart {
-  position: relative;
-}
-
-.hidden {
-  height: 1.5em;
-  width: 1.5em;
-  position: relative;
-  display: inline-block;
-  visibility: hidden;
-}
-
-.margin-top {
-  margin-top: 1em;
-}
-
-.margin-left {
-  margin-left: 3em;
-}
-
-.margin-right {
-  margin-right: 2.5em;
-}
-
-.margin-left-price {
-  margin-left: 1em;
-}
-
-.em12 {
-  font-size: $font-size-3;
-}
-.em25 {
-  font-size: $font-size-6;
-}
-
-.justify {
-  text-align: justify;
-}
-
-.fa-cart-plus {
-  margin: 0 1em;
-  background-color: $blue-color;
-  color: $orange-color;
-  padding: 0.4em 0.35em;
-  border-radius: 2em;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-ul {
-  padding: 0;
-}
-
-li {
-  list-style-type: none;
-}
+// style for DropList
 
 .Dropdown-root {
   display: inline-block;
@@ -286,24 +193,4 @@ li {
 
 .Dropdown-placeholder {
   padding-left: 1.5em;
-}
-
-.blueBG {
-  background-color: $blue-color;
-}
-
-.orangeBG {
-  background-color: $orange-color;
-}
-
-.blueText {
-  color: $blue-color;
-}
-
-.orangeText {
-  color: $orange-color;
-}
-
-.greyBG {
-  background-color: $lightgrey-color;
 }
