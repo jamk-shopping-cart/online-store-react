@@ -1,5 +1,13 @@
 @import 'src/scss/_variables.scss';
 
+$screen-tablet-min: 768px;
+
+@mixin tablet {
+  @media (min-width: #{$screen-tablet-min}) {
+    @content;
+  }
+}
+
 // general style for all components:
 body {
   background-color: $white-color;
@@ -143,12 +151,26 @@ nav {
 
 .price {
   font-weight: $font-weight-normal;
-  font-size: $font-size-3;
+  font-size: $font-size-4;
+  @include tablet{
+    font-size: $font-size-5;
+  }
 }
 
 // style for ItemInfo:
 .feature {
-  font-weight: $font-weight-highbold;
+  font-weight: $font-weight-bold;
+  @include tablet {
+    font-size: $font-size-4;
+  }
+}
+
+.total {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-4;
+  @include tablet {
+    font-size: $font-size-5;
+  }
 }
 
 .description {
@@ -158,6 +180,26 @@ nav {
 .fa-cart-plus {
   background-color: $blue-color;
   color: $orange-color;
+}
+
+.imgWidth {
+  width: 300px;
+  @include tablet {
+    width: 600px;
+  }
+}
+
+.info {
+  @include tablet {
+    margin-left: 8em !important;
+    margin-right: 8em !important;
+  }
+}
+
+.priceMargin {
+  @include tablet {
+    margin-right: 5em;
+  }
 }
 
 // style for ShoppingCart:

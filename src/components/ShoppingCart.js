@@ -21,13 +21,13 @@ class ShoppingCart extends Component {
       return (
         <React.Fragment>
           <Navigation count={this.props.count} />
-          <div className="container-full top">
+          <div className="container-full top info">
             <div className="model text-center mt-2">Shopping Cart:</div>
             <div className="animated fadeIn delay-0.5s mx-4">
               {Object.keys(this.props.cart).map(index => (
                 <li key={index}>
                   <div className="animated fadeIn delay-0.5s border border-dark rounded p-2 mt-3">
-                    <i className="far fa-times-circle fa-2x" />
+                    <i className="fas fa-times fa-2x float-right" />
                     <table>
                       <tbody>
                         <tr>
@@ -48,17 +48,17 @@ class ShoppingCart extends Component {
               ))}
             </div>
           </div>
-          <div className="row mx-4 my-2">
+          <div className="row mx-4 my-2 info">
             <div className="col-12 mt-3 animated fadeIn delay-0.5s">
-              <span className="feature">Total: </span>
-              <span className="price">€{this.totalPriceCart(this.props.cart) + this.toDelivery()}</span>
+              <span className="total">Total: </span>
+              <span className="total float-right">€{this.totalPriceCart(this.props.cart) + this.toDelivery()}</span>
             </div>
             <div className="col-12">
               <hr />
             </div>
             <div className="col-12 animated fadeIn delay-0.5s">
               <span className="feature">Items: </span>
-              <span className="price">€{this.totalPriceCart(this.props.cart)}</span>
+              <span className="feature float-right">€{this.totalPriceCart(this.props.cart)}</span>
               {/* {Object.keys(this.props.cart).map(index => (
               <div key={index}>
                 {this.props.cart[index].count * Number(this.props.cart[index].item.price.substring(1))}
@@ -68,7 +68,7 @@ class ShoppingCart extends Component {
             </div>
             <div className="col-12 pt-2 animated fadeIn delay-0.5s">
               <span className="feature">Delivery: </span>
-              <span className="price">€10</span>
+              <span className="feature float-right">€10</span>
             </div>
             <div className="mt-4 text-center animated fadeIn delay-1s">
               <button type="button" className="btn">
