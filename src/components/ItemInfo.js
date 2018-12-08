@@ -35,15 +35,15 @@ class ItemInfo extends Component {
             <div id="collection">
               <div className="model text-center">{this.props.item.model}</div>
               <div className="animated fadeIn delay-0.5s text-center">
-                <img src={this.props.item.imgUrl} alt="shoes model" width={300} />
+                <img className="imgWidth" src={this.props.item.imgUrl} alt="shoes model"/>
               </div>
             </div>
             <div className="row ml-2">
-              <span className="model">{this.props.item.price}</span>
+              <span className="model priceMargin">{this.props.item.price}</span>
               <DropList setSize={this.setSize.bind(this)} />
               <i className="fas fa-2x fa-cart-plus rounded-circle ml-3 p-3" onClick={this.handleClick.bind(this)} />
             </div>
-            <div className="mt-3 mx-5">
+            <div className="mt-3 mx-5 info">
               <div>
                 <p className="feature text-left mb-0">Product information:</p>
               </div>
