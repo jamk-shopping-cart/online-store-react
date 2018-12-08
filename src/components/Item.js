@@ -9,7 +9,7 @@ const Item = ({ item, callback }) => {
       <div className="row w-100 ml-auto mr-auto">
         <p className="model col-12 col-lg-4">{item.model}</p>
         <Link className="col-12 col-lg-4" to="iteminfo">
-          <img src={item.imgUrl} alt="shoes model" width={300} />
+          <img className="imgWidth" src={item.imgUrl} alt="shoes model"/>
         </Link>
         <p className="price col-12 col-lg-4">{item.price}</p>
         <div className="col-8">
