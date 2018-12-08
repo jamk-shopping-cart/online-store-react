@@ -41,6 +41,10 @@ body {
   .title {
     color: $orange-color;
     font-size: $font-size-7;
+    font-weight: $font-weight-light;
+    @include tablet {
+      font-size: $font-size-9
+    }
   }
 
   .subtitle {
@@ -159,9 +163,9 @@ nav {
 
 // style for ItemInfo:
 .feature {
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-highbold;
   @include tablet {
-    font-size: $font-size-4;
+    font-size: $font-size-3;
   }
 }
 
