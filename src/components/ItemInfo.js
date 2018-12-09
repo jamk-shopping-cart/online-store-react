@@ -31,7 +31,7 @@ class ItemInfo extends Component {
       return (
         <React.Fragment>
           <Navigation count={this.props.count} />
-          <div className="container-full top row">
+          <div className="container-full top max-w row mx-auto">
             <div id="collection" className="col-12 col-lg-4 order-lg-1 text-center">
               <div className="model text-center">{this.props.item.model}</div>
               <div className="animated fadeIn delay-0.5s text-center">

@@ -225,6 +225,11 @@ nav {
     margin-right: 6em;
   }
 }
+.max-w {
+    @include desktop {
+        max-width: 1200px;
+    }
+}
 
 // style for ShoppingCart:
 .top {
