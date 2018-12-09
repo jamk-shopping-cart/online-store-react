@@ -36,6 +36,11 @@ body {
     align-items: center;
   }
 }
+.max-w {
+    @include desktop {
+        max-width: 1300px;
+    }
+}
 
 // style for StartPage, SignIn and Registration:
 .container-fluid {
@@ -224,11 +229,6 @@ nav {
   @include desktop {
     margin-right: 6em;
   }
-}
-.max-w {
-    @include desktop {
-        max-width: 1200px;
-    }
 }
 
 // style for ShoppingCart:
