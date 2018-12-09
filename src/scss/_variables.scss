@@ -22,3 +22,10 @@ $font-weight-light: 100;
 $font-weight-normal: $font-weight-light * 2;
 $font-weight-bold: $font-weight-light * 4;
 $font-weight-highbold: $font-weight-light * 7;
+
+$screen-tablet-min: 768px;
+$screen-desktop-min: 992px;
+
+$imgsize: 300px;
+$imgsize-tablet: 600px;
+$imgsize-desktop: 450px;
