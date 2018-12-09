@@ -22,8 +22,8 @@ class ShoppingCart extends Component {
         <React.Fragment>
           <Navigation count={this.props.count} />
           <div className="container-full top info">
-            <div className="model text-center mt-2">Shopping Cart:</div>
-            <div className="animated fadeIn delay-0.5s mx-4">
+            <div className="model text-center mt-2 max-w mx-auto">Shopping Cart:</div>
+            <div className="animated fadeIn delay-0.5s mx-4 max-w mx-auto">
               {Object.keys(this.props.cart).map(index => (
                 <li key={index}>
                   <div className="animated fadeIn delay-0.5s border border-dark rounded p-2 mt-3 col-lg-8 mx-auto">
@@ -48,7 +48,7 @@ class ShoppingCart extends Component {
               ))}
             </div>
           </div>
-          <div className="row mx-4 my-2 info">
+          <div className="row mx-4 my-2 info max-w mx-auto">
             <div className="col-12 col-lg-8 mt-3 animated fadeIn delay-0.5s">
               <span className="total">Total: </span>
               <span className="total float-right">€{this.totalPriceCart(this.props.cart) + this.toDelivery()}</span>

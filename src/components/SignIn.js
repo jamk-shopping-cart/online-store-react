@@ -5,7 +5,7 @@ class SignIn extends Component {
   render() {
     return (
       <div className="container-fluid d-flex text-center">
-        <div className="row w-100 mx-auto">
+        <div className="row w-100 mx-auto  max-w">
           <div className="title col-12 top-title align-self-start text-center">
             <Link to="collection">ShoeFlex</Link>
           </div>
