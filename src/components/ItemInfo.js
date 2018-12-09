@@ -31,19 +31,19 @@ class ItemInfo extends Component {
       return (
         <React.Fragment>
           <Navigation count={this.props.count} />
-          <div className="container-full top">
-            <div id="collection">
+          <div className="container-full top row">
+            <div id="collection" className="col-12 col-lg-4 order-lg-1 text-center">
               <div className="model text-center">{this.props.item.model}</div>
               <div className="animated fadeIn delay-0.5s text-center">
                 <img className="imgWidth" src={this.props.item.imgUrl} alt="shoes model"/>
               </div>
             </div>
-            <div className="row ml-2">
+            <div className="col-12 row ml-2 order-lg-3">
               <span className="model priceMargin">{this.props.item.price}</span>
               <DropList setSize={this.setSize.bind(this)} />
               <i className="fas fa-2x fa-cart-plus rounded-circle ml-3 p-3" onClick={this.handleClick.bind(this)} />
             </div>
-            <div className="mt-3 mx-5 info">
+            <div className="mt-3 mx-5 info col-12 col-lg-4 order-lg-1 order-lg-2">
               <div>
                 <p className="feature text-left mb-0">Product information:</p>
               </div>

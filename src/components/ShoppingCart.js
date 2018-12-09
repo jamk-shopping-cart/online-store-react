@@ -26,7 +26,7 @@ class ShoppingCart extends Component {
             <div className="animated fadeIn delay-0.5s mx-4">
               {Object.keys(this.props.cart).map(index => (
                 <li key={index}>
-                  <div className="animated fadeIn delay-0.5s border border-dark rounded p-2 mt-3">
+                  <div className="animated fadeIn delay-0.5s border border-dark rounded p-2 mt-3 col-lg-8 mx-auto">
                     <i className="fas fa-times fa-2x float-right" />
                     <table>
                       <tbody>
@@ -49,14 +49,14 @@ class ShoppingCart extends Component {
             </div>
           </div>
           <div className="row mx-4 my-2 info">
-            <div className="col-12 mt-3 animated fadeIn delay-0.5s">
+            <div className="col-12 col-lg-8 mt-3 animated fadeIn delay-0.5s">
               <span className="total">Total: </span>
               <span className="total float-right">€{this.totalPriceCart(this.props.cart) + this.toDelivery()}</span>
             </div>
-            <div className="col-12">
+            <div className="col-12 col-lg-8">
               <hr />
             </div>
-            <div className="col-12 animated fadeIn delay-0.5s">
+            <div className="col-12 col-lg-8 animated fadeIn delay-0.5s">
               <span className="feature">Items: </span>
               <span className="feature float-right">€{this.totalPriceCart(this.props.cart)}</span>
               {/* {Object.keys(this.props.cart).map(index => (
@@ -66,11 +66,11 @@ class ShoppingCart extends Component {
               </div>
             ))} */}
             </div>
-            <div className="col-12 pt-2 animated fadeIn delay-0.5s">
+            <div className="col-12 col-lg-8 pt-2 animated fadeIn delay-0.5s">
               <span className="feature">Delivery: </span>
               <span className="feature float-right">€10</span>
             </div>
-            <div className="mt-4 text-center animated fadeIn delay-1s">
+            <div className="col-12 mt-4 text-center animated fadeIn delay-1s">
               <button type="button" className="btn">
                 Continue to Pay
               </button>
