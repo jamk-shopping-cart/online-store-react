@@ -1,15 +1,14 @@
 @import 'src/scss/_variables.scss';
 
-
 @mixin tablet {
-    @media (min-width: $screen-tablet-min) and (max-width: $screen-desktop-min) {
+  @media (min-width: $screen-tablet-min) and (max-width: $screen-desktop-min) {
     @content;
   }
 }
 @mixin desktop {
-    @media (min-width: $screen-desktop-min) {
-        @content;
-    }
+  @media (min-width: $screen-desktop-min) {
+    @content;
+  }
 }
 
 // general style for all components:
@@ -36,10 +35,11 @@ body {
     align-items: center;
   }
 }
+
 .max-w {
-    @include desktop {
-        max-width: 1300px;
-    }
+  @include desktop {
+    max-width: 1300px;
+  }
 }
 
 // style for StartPage, SignIn and Registration:
@@ -52,10 +52,10 @@ body {
     font-size: $font-size-7;
     font-weight: $font-weight-light;
     @include tablet {
-      font-size: $font-size-9
+      font-size: $font-size-9;
     }
     @include desktop {
-      font-size: $font-size-9  
+      font-size: $font-size-9;
     }
   }
 
@@ -168,7 +168,7 @@ nav {
 .price {
   font-weight: $font-weight-normal;
   font-size: $font-size-4;
-  @include tablet{
+  @include tablet {
     font-size: $font-size-5;
   }
   @include desktop {
@@ -251,9 +251,9 @@ nav {
 .Dropdown-root {
   display: inline-block;
   margin-left: 4em;
-    @include desktop {
-        margin-left: 0;
-    }
+  @include desktop {
+    margin-left: 0;
+  }
 }
 
 .Dropdown-control {
@@ -269,10 +269,10 @@ nav {
 }
 
 .mt-6 {
-    margin-top: 1.75em;
+  margin-top: 1.75em;
 }
 .ml-lg-0 {
-    @include desktop {
-        margin-left: 0;
-    }
+  @include desktop {
+    margin-left: 0;
+  }
 }

@@ -35,7 +35,7 @@ class ItemInfo extends Component {
             <div id="collection" className="col-12 col-lg-4 order-lg-1 text-center">
               <div className="model text-center">{this.props.item.model}</div>
               <div className="animated fadeIn delay-0.5s text-center">
-                <img className="imgWidth" src={this.props.item.imgUrl} alt="shoes model"/>
+                <img className="imgWidth" src={this.props.item.imgUrl} alt="shoes model" />
               </div>
             </div>
             <div className="col-12 row ml-2 order-lg-3">
