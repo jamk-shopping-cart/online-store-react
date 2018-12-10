@@ -47,7 +47,7 @@ class ItemInfo extends Component {
               <div>
                 <p className="feature text-left mb-0">Product information:</p>
               </div>
-              <div className="text-justify">{this.props.item.description}</div>
+              <div>{this.props.item.description}</div>
               <div>
                 <span className="feature">Color: </span>
                 <span className="description">{this.props.item.color}</span>
