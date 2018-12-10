@@ -5,11 +5,11 @@ class SignIn extends Component {
   render() {
     return (
       <div className="container-fluid d-flex text-center">
-        <div className="row w-100 mx-auto  max-w">
+        <div className="row w-100 mx-auto max-width">
           <div className="title col-12 top-title align-self-start text-center">
             <Link to="collection">ShoeFlex</Link>
           </div>
-          <div className="form col-12 col-md-8 col-lg-6 align-self-center">
+          <div className="form col-11 col-md-8 col-lg-6 align-self-center">
             <form>
               <input
                 id="username"

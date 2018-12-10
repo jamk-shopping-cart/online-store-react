@@ -19,25 +19,39 @@
           <li>Jouni Timonen</li>
       </ul>
     <a href="https://student.labranet.jamk.fi/~K8397/web_ohjelmointi/harjoitustyo/">Linkki harjoitustyöhön sisältävään zip-fileen. build-zip on suositeltava. ks readme ohjeistukseen</a>
+
     <p>
       ShoeFlex-verkkokauppasivusto on toteutettu neljän hengen porukalla kolmen opintojakson tavoitteiden
-      saavuttamiseksi yhdellä harjoitustyöllä. Nämä kurssit ovat Web-Visualisointi, Web-ohjelmointi ja Web-palvelun määrittely ja suunnittelu. Tässä dokumentissa selvitämme, minkälaisen harjoitustyön teimme, mikä sen
-      rakenne on, mitä tiedostoja se sisältää ja kuka meistä on tehnyt mitäkin.
+      saavuttamiseksi yhdellä harjoitustyöllä. Nämä kurssit ovat Web-Visualisointi, Web-ohjelmointi ja Web-palvelun
+      määrittely ja suunnittelu. Tässä dokumentissa selvitämme, minkälaisen harjoitustyön teimme, mikä sen rakenne on,
+      mitä tiedostoja se sisältää ja kuka meistä on tehnyt mitäkin.
     </p>
-      <p>
-          Projektimme on verkkokauppa ShoeFlex, jossa käyttäjä pystyy selaamaan sivustolle ulkoisesta JSON-tiedostosta (<a href="https://5bf089690756d2001311987d.mockapi.io/shoes">https://5bf089690756d2001311987d.mockapi.io/shoes</a>) tuotuja tuotetietoja, esim. nimen ja hinnan.       
-      </p>
-      <p>Sivuston rautalankamalli ja linkki Mockup-tiedostoon:</p>
-      <a href="https://student.labranet.jamk.fi/~K8397/web_ohjelmointi/rautalanka.PNG">Sivun rakenne : https://student.labranet.jamk.fi/~K8397/web_ohjelmointi/rautalanka.PNG</a>
-      <a href="https://www.fluidui.com/editor/live/preview/cF80ZmI1YWFiMDVhM2E0YWM1M2UzOWJlNzI1MWE0ZjYzZg==">Mockup-linkki: https://www.fluidui.com/editor/live/preview/cF80ZmI1YWFiMDVhM2E0YWM1M2UzOWJlNzI1MWE0ZjYzZg==</a>
+    <p>
+      Projektimme on verkkokauppa ShoeFlex, jossa käyttäjä pystyy selaamaan sivustolle ulkoisesta JSON-tiedostosta (<a
+        href="https://5bf089690756d2001311987d.mockapi.io/shoes"
+        >https://5bf089690756d2001311987d.mockapi.io/shoes</a
+      >) tuotuja tuotetietoja, esim. nimen ja hinnan.
+    </p>
+    <p>Sivuston rautalankamalli ja linkki Mockup-tiedostoon:</p>
+    <a href="https://student.labranet.jamk.fi/~K8397/web_ohjelmointi/rautalanka.PNG"
+      >Sivun rakenne : https://student.labranet.jamk.fi/~K8397/web_ohjelmointi/rautalanka.PNG</a
+    >
+    <a href="https://www.fluidui.com/editor/live/preview/cF80ZmI1YWFiMDVhM2E0YWM1M2UzOWJlNzI1MWE0ZjYzZg=="
+      >Mockup-linkki: https://www.fluidui.com/editor/live/preview/cF80ZmI1YWFiMDVhM2E0YWM1M2UzOWJlNzI1MWE0ZjYzZg==</a
+    >
     <p>
       Sivuston perusrakenne on seuraava: Reactilla tuodaan sivustolle Components-kansiosta javascript-tiedostoja, jotka
-        luovat kaikki tarvittavat komponentit index.html-sivustolle "root"-divin sisälle. 
+      luovat kaikki tarvittavat komponentit index.html-sivustolle "root"-divin sisälle.
     </p>
     <p>
-          Pääkomponentti on App.js, johon ladataan React-router ominaisuudella seuraavan sivun komponentit. Täten sivustolla ei tarvitse luoda aina uutta html-dokumenttia. Ostoskori-komponentissa tarvitaan local storage -ominaisuuksia, joilla sessiossa päivitetään ostoskori-ikoni, sekä päivitetään ostoskoriin lisätyt tuotteet.
+      Pääkomponentti on App.js, johon ladataan React-router ominaisuudella seuraavan sivun komponentit. Täten sivustolla
+      ei tarvitse luoda aina uutta html-dokumenttia. Ostoskori-komponentissa tarvitaan local storage -ominaisuuksia,
+      joilla sessiossa päivitetään ostoskori-ikoni, sekä päivitetään ostoskoriin lisätyt tuotteet.
     </p>
+    <p>Sivuston ulkonäkö on luotu hyödyntäen Bootstrap kirjastoja. Sama koskee tätä dokumenttia.</p>
+    <h2>Ajankäyttö</h2>
     <p>
+
         Sivuston ulkonäkö on luotu hyödyntäen Bootstrap-kirjastoa ja sass-esiprosessoria. Sivustossa toistuvat arvot on tallennettu vakiomuuttujiin variables.scss-tiedostoon. Sivustot skaalautuvat sujuvasti mobiilikäyttöliittymästä työpöytä-näkymään. Sivuston container-elementtiin on määritelty selkeät rajat jotta mikään näkymä ei laajene liikaa vaakasuuntaan.
     </p>
     <h2> Ajankäyttö</h2>
@@ -82,7 +96,10 @@
       </tr>
       <tr>
         <td>package.json</td>
-        <td>Projektin perustiedot, esim. versiotiedot, private-asetuksien arvot, importatut kirjastot ja muokkaajien nimet. Gitin automaattisesti projektin luomisessa generoima tiedosto.</td>
+        <td>
+          Projektin perustiedot, esim. versiotiedot, private-asetuksien arvot, importatut kirjastot ja muokkaajien
+          nimet. Gitin automaattisesti projektin luomisessa generoima tiedosto.
+        </td>
         <td>Kaikki</td>
       </tr>
       <tr>
@@ -177,9 +194,7 @@
       </tr>
       <tr>
         <td>documents</td>
-        <td>
-          Tämän sivuston sisältävä kansio. 
-        </td>
+        <td>Tämän sivuston sisältävä kansio.</td>
         <td>Leevi</td>
       </tr>
       <tr>
@@ -190,7 +205,8 @@
         <td>Dmitry / Leevi / Jouni</td>
       </tr>
     </table>
-      <h3>documents-kansio</h3>
+
+    <h3>documents-kansio</h3>
     <table class="table">
       <tr>
         <th>Tiedosto</th>
@@ -203,72 +219,107 @@
         <td>Tämän sivuston html-tiedosto. Käyttää Bootstrapia tyylimäärittelyihin.</td>
         <td>Aleksi / Leevi</td>
       </tr>
-      </table>
-     <h3>components-kansio</h3>
+    </table>
+
+    <h3>components-kansio</h3>
     <table class="table">
       <tr>
         <th>Tiedosto</th>
         <th>Kuvaus</th>
         <th>Tekijät</th>
       </tr>
-        <tr>
+      <tr>
         <td>Collection.js</td>
-        <td>Collection-komponentti määrittelee Collection-sivun sisällön, johon kuuluu komponentit navigation ja Itemlist. Collection-sivusto on ns. Pääsivu, johon päädytään oletuksena.</td>
+        <td>
+          Collection-komponentti määrittelee Collection-sivun sisällön, johon kuuluu komponentit navigation ja Itemlist.
+          Collection-sivusto on ns. Pääsivu, johon päädytään oletuksena.
+        </td>
         <td>Aleksi / Dmitry</td>
       </tr>
-        <tr>
+      <tr>
         <td>Counter.js</td>
-        <td>Komponentti, jota käytetään laskurina navigation-barissa. Laskuri kasvaa aina kun tuote lisätään ostoskoriin (sama tuote voi olla useita kertoja).</td>
+        <td>
+          Komponentti, jota käytetään laskurina navigation-barissa. Laskuri kasvaa aina kun tuote lisätään ostoskoriin
+          (sama tuote voi olla useita kertoja).
+        </td>
         <td>Dmitry</td>
       </tr>
-        <tr>
+      <tr>
         <td>DropList.js</td>
         <td>Komponentti, jolla luodaan painikkeella avautuva lista, jolla valitaan tuotteen koko.</td>
+
         <td>Jouni</td>
       </tr>
-        <tr>
+      <tr>
         <td>Item.js</td>
-        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>
+          Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.
+        </td>
         <td>Dmitry</td>
       </tr>
-        <tr>
+      <tr>
         <td>ItemInfo.js</td>
-        <td>Komponentti, joka listaa parametrina saadun Item-komponentin jäsenen ja listaa sen tarkemmat tiedot sivustolle dropdown-valikkona. Muita käytettyjä koponentteja ovat Navigation ja Droplist.</td>
+        <td>
+          Komponentti, joka listaa parametrina saadun Item-komponentin jäsenen ja listaa sen tarkemmat tiedot sivustolle
+          dropdown-valikkona. Muita käytettyjä koponentteja ovat Navigation ja Droplist.
+        </td>
         <td>Aleksi / Dmitry</td>
       </tr>
-        <tr>
+      <tr>
         <td>ItemList.js</td>
-        <td>React-komponentti, jossa listataan JSON-tiedostosta löydetty tieto ja luodaan sen mukaan Item-komponentteja. JSON-file, jota projektissa käytetään löytyy <a href="'https://5bf089690756d2001311987d.mockapi.io/shoes">tästä</a>.</td>
+        <td>
+          React-komponentti, jossa listataan JSON-tiedostosta löydetty tieto ja luodaan sen mukaan Item-komponentteja.
+          JSON-file, jota projektissa käytetään löytyy
+          <a href="'https://5bf089690756d2001311987d.mockapi.io/shoes">tästä</a>.
+        </td>
         <td>Aleksi / Dmitry</td>
       </tr>
-        <tr>
+      <tr>
         <td>Navigation.js</td>
-        <td>React-komponentti, jossa luodaan sivustolle Navigation-palkki. Palkki sijoittuu sivun yläosaan ja on käytössä kaikissa, paitsi kirjautumis-, rekisteröitymis- ja kansilehtinäkymässä.</td>
+        <td>
+          React-komponentti, jossa luodaan sivustolle Navigation-palkki. Palkki sijoittuu sivun yläosaan ja on käytössä
+          kaikissa, paitsi kirjautumis-, rekisteröitymis- ja kansilehtinäkymässä.
+        </td>
         <td>Dmitry</td>
       </tr>
-        <tr>
+      <tr>
         <td>Registration.js</td>
-        <td>Komponentti, joka luo rekisteröitymis-näkymän, johon pääsee kirjautumisnäkymästä. Input-kentät on pakko täyttää.</td>
+        <td>
+          Komponentti, joka luo rekisteröitymis-näkymän, johon pääsee kirjautumisnäkymästä. Input-kentät on pakko
+          täyttää.
+        </td>
         <td>Jouni</td>
       </tr>
-        <tr>
+      <tr>
         <td>Router.js</td>
-        <td>Komponentti, jonka avulla voidaan muuttaa sivunäkymää yhdestä toiseen. Käytännössä luo linkin, jota painamalla uusi näkymä avautuu.</td>
+        <td>
+          Komponentti, jonka avulla voidaan muuttaa sivunäkymää yhdestä toiseen. Käytännössä luo linkin, jota painamalla
+          uusi näkymä avautuu.
+        </td>
         <td>Dmitry</td>
       </tr>
-        <tr>
+      <tr>
         <td>ShoppingCart.js</td>
-        <td>Komponentti, jossa luodaan ostoskärry-näkymä. Laskee ostoskärryyn lisättyjen tuotteiden kokonaishinnan, sekä tuotehinnan, jos samaa tuotetta on lisätty useampi kappale. Tyhjässä ostoskärryssä ilmestyy teksti: "Shopping cart is empty".</td>
+        <td>
+          Komponentti, jossa luodaan ostoskärry-näkymä. Laskee ostoskärryyn lisättyjen tuotteiden kokonaishinnan, sekä
+          tuotehinnan, jos samaa tuotetta on lisätty useampi kappale. Tyhjässä ostoskärryssä ilmestyy teksti: "Shopping
+          cart is empty".
+        </td>
         <td>Dmitry / Leevi</td>
       </tr>
-        <tr>
+      <tr>
         <td>SignIn.js</td>
-        <td>Komponentti, joka luo Sign-in-näkymän, jossa käyttäjä kirjautuu sisään. Tässä versiossa log in ei vielä tee mitään, mutta se korvataan napilla kun kirjautumien saadaan toimiaan. Tästä näkymästä pääsee myös rekisteröitymisnäkymään.</td>
+        <td>
+          Komponentti, joka luo Sign-in-näkymän, jossa käyttäjä kirjautuu sisään. Tässä versiossa log in ei vielä tee
+          mitään, mutta se korvataan napilla kun kirjautumien saadaan toimiaan. Tästä näkymästä pääsee myös
+          rekisteröitymisnäkymään.
+        </td>
         <td>Jouni</td>
       </tr>
-        <tr>
+      <tr>
         <td>StartPage.js</td>
         <td>Komponentti, joka luo Kansilehti-sivun näkymän. Kansilehti katoaa nuoli-painiketta klikattaessa eikä ilmaannu uudestaan ilman sivun uudelleenlataamista.</td>
+
         <td>Dmitry / Jouni</td>
       </tr>
     </table>

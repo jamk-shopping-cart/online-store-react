@@ -8,23 +8,23 @@ class Navigation extends Component {
     if (!this.props.count) {
       return (
         <div className="container-full">
-            <nav className="navbar navbar-light fixed-top">
-              <div className="col-2 text-center">
-                <Link to="signin" className="navbar-brand">
-                  <i className="fas fa-user" />
-                </Link>
-              </div>
-              <div className="col-8 col-md-6 col-lg-4 text-center">
-                <Link to="collection" className="navbar-brand">
-                  <span className="header">ShoeFlex</span>
-                </Link>
-              </div>
-              <div className="col-2 text-center">
-                <Link to="cart" className="navbar-brand">
-                  <i className="fas fa-shopping-cart" />
-                </Link>
-              </div>
-            </nav>
+          <nav className="navbar navbar-light fixed-top">
+            <div className="col-2 text-center">
+              <Link to="signin" className="navbar-brand">
+                <i className="fas fa-user" />
+              </Link>
+            </div>
+            <div className="col-8 col-md-6 col-lg-4 text-center">
+              <Link to="collection" className="navbar-brand">
+                <span className="header">ShoeFlex</span>
+              </Link>
+            </div>
+            <div className="col-2 text-center">
+              <Link to="cart" className="navbar-brand">
+                <i className="fas fa-shopping-cart" />
+              </Link>
+            </div>
+          </nav>
         </div>
       );
     } else {
