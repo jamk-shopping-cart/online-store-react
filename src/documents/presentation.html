@@ -18,7 +18,7 @@
           <li>Dmitry Sklyarov</li>
           <li>Jouni Timonen</li>
       </ul>
-    <a href="https://student.labranet.jamk.fi/~K8397/web_ohjelmointi/harjoitustyo/">Linkki harjoitustyöhön sisältävään zip-fileen</a>
+    <a href="https://student.labranet.jamk.fi/~K8397/web_ohjelmointi/harjoitustyo/">Linkki harjoitustyöhön sisältävään zip-fileen. build-zip on suositeltava. ks readme ohjeistukseen</a>
     <p>
       ShoeFlex-verkkokauppasivusto on toteutettu neljän hengen porukalla kolmen opintojakson tavoitteiden
       saavuttamiseksi yhdellä harjoitustyöllä. Nämä kurssit ovat Web-Visualisointi, Web-ohjelmointi ja Web-palvelun määrittely ja suunnittelu. Tässä dokumentissa selvitämme, minkälaisen harjoitustyön teimme, mikä sen
@@ -38,13 +38,13 @@
           Pääkomponentti on App.js, johon ladataan React-router ominaisuudella seuraavan sivun komponentit. Täten sivustolla ei tarvitse luoda aina uutta html-dokumenttia. Ostoskori-komponentissa tarvitaan local storage -ominaisuuksia, joilla sessiossa päivitetään ostoskori-ikoni, sekä päivitetään ostoskoriin lisätyt tuotteet.
     </p>
     <p>
-        Sivuston ulkonäkö on luotu hyödyntäen Bootstrap kirjastoja. Sama koskee tätä dokumenttia.
+        Sivuston ulkonäkö on luotu hyödyntäen Bootstrap-kirjastoa ja sass-esiprosessoria. Sivustossa toistuvat arvot on tallennettu vakiomuuttujiin variables.scss-tiedostoon. Sivustot skaalautuvat sujuvasti mobiilikäyttöliittymästä työpöytä-näkymään. Sivuston container-elementtiin on määritelty selkeät rajat jotta mikään näkymä ei laajene liikaa vaakasuuntaan.
     </p>
     <h2> Ajankäyttö</h2>
-      <p>Projektiin käytettiin yhteensä n. 7 tuntia per henkilö yhteiseen suunnitteluun ja määrittelyyn, käyttöympäristön alustukseen n. 6 tuntia (github), itse ohjelmointiin ja moduulien luomiseen n. 23 tuntia per henkilö ja dokumentointiin 5h per henkilö. Yhteensä 41 tuntia kaiken kaikkiaan</p>
+      <p>Projektiin käytettiin yhteensä n. 30 tuntia per henkilö yhteiseen suunnitteluun ja määrittelyyn, käyttöympäristön alustukseen n. 6 tuntia (github), itse ohjelmointiin, käyttöliittymään ja moduulien luomiseen n. 43 tuntia per henkilö ja dokumentointiin 8h per henkilö. Yhteensä 87 tuntia kaiken kaikkiaan per henkilö.</p>
     <h2>Arvio</h2>
       <p>
-          Ryhmäläiset ovat tyytyväisiä aikaansaannokseen, sekä omaan työpanokseensa. Projektissa toiset ryhmäläiset painottivat enemmän dokumenttipuoleen ja toiset enemmän puhtaaseen ohjelmointiin, mutta lopulta kaikki kuitenkin tekivät kaikkia osa-alueita. Lopputyö on laaja, mutta voisi olla vielä kattavampi ryhmän koon huomioon ottaen.
+          Ryhmäläiset ovat tyytyväisiä aikaansaannokseen, sekä omaan työpanokseensa. Projektissa toiset ryhmäläiset painottivat enemmän dokumenttipuoleen ja toiset enemmän puhtaaseen ohjelmointiin, mutta lopulta kaikki kuitenkin tekivät kaikkia osa-alueita. Lopputyö on laaja, mutta voisi olla vielä kattavampi ryhmän koon huomioon ottaen. Buildin tekeminen jäi viime hetkille.
       </p>
       <table class="table">
           <tr>
@@ -54,7 +54,7 @@
           </tr>
            <tr>
               <td>Aleksi</td>
-              <td>4</td>
+              <td>3</td>
               <td>Teki oman osansa ohjelmoinnista. Keskittyi dokumentointiin.</td>
           </tr>
            <tr>
@@ -64,13 +64,13 @@
           </tr>
            <tr>
               <td>Jouni</td>
-              <td>4</td>
+              <td>5</td>
               <td>Ohjelmoi hyvin ja keksi hyviä ideoita, kunka asiat voitaisiin tehdä paremmin. Keksi suurimman osan sivuston ulkoasusta.</td>
           </tr>
            <tr>
               <td>Leevi</td>
               <td>4</td>
-              <td>Teki oman osansa ohjelmoinnista. Keskittyi suunnitteluun ja rajauksiin.</td>
+              <td>Teki oman osansa ohjelmoinnista. Keskittyi suunnitteluun, rajauksiin ja bootstrap-ominaisuuksiin.</td>
           </tr>
       </table>
     <h2>Projektin tiedostot</h2>
@@ -136,7 +136,7 @@
       </tr>
       <tr>
         <td>App.scss</td>
-        <td>Pääohjelman tyylitiedosto.</td>
+        <td>Pääohjelman tyylitiedosto, joka sisältää esiprosessorin </td>
         <td>Kaikki</td>
       </tr>
       <tr>
@@ -174,12 +174,20 @@
           Jokaisella komponentilla on aina oma javascript ja css-tiedosto omalla nimellään.
         </td>
         <td>Dmitry</td>
-      </tr>  <tr>
+      </tr>
+      <tr>
         <td>documents</td>
         <td>
           Tämän sivuston sisältävä kansio. 
         </td>
         <td>Leevi</td>
+      </tr>
+      <tr>
+        <td>scss</td>
+        <td>
+          Sisältää variables.scss-kansion joka pitää sisällään variables.scss-tiedoston, jossa säilytetään kaikki tarvittavat muuttujat.  
+        </td>
+        <td>Dmitry / Leevi / Jouni</td>
       </tr>
     </table>
       <h3>documents-kansio</h3>
@@ -215,7 +223,7 @@
       </tr>
         <tr>
         <td>DropList.js</td>
-        <td>Item-komponentin React-skripti. Käytetään, kun halutaan luoda Item-luokan komponentti toisessa tiedostossa.</td>
+        <td>Komponentti, jolla luodaan painikkeella avautuva lista, jolla valitaan tuotteen koko.</td>
         <td>Jouni</td>
       </tr>
         <tr>
@@ -260,7 +268,7 @@
       </tr>
         <tr>
         <td>StartPage.js</td>
-        <td>Komponentti, joka luo Kansilehti-sivun näkymä. Kansilehti katoaa klikattaessa eikä ilmaannu uudestaan ilman sivun uudelleenlataamista.</td>
+        <td>Komponentti, joka luo Kansilehti-sivun näkymän. Kansilehti katoaa nuoli-painiketta klikattaessa eikä ilmaannu uudestaan ilman sivun uudelleenlataamista.</td>
         <td>Dmitry / Jouni</td>
       </tr>
     </table>
