@@ -21,42 +21,44 @@ class ShoppingCart extends Component {
       return (
         <React.Fragment>
           <Navigation count={this.props.count} />
-          <div className="container-full top info">
-            <div className="model text-center mt-2 max-w mx-auto">Shopping Cart:</div>
-            <div className="animated fadeIn delay-0.5s mx-4 max-w mx-auto">
-              {Object.keys(this.props.cart).map(index => (
-                <li key={index}>
-                  <div className="animated fadeIn delay-0.5s border border-dark rounded p-2 mt-3 col-lg-8 mx-auto">
-                    <i className="fas fa-times fa-2x float-right" />
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td rowSpan="2">
-                            <img src={this.props.cart[index].item.imgUrl} alt="shoes model" width={120} />
-                          </td>
-                          <td className="px-3">{this.props.cart[index].item.model}</td>
-                          <td>{this.props.cart[index].item.price}</td>
-                        </tr>
-                        <tr>
-                          <td className="px-3">Size: {this.props.cart[index].size}</td>
-                          <td>QTY: {this.props.cart[index].count}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </li>
-              ))}
+          <div className="container-full top marginLg">
+            <div className="row text-center">
+              <div className="col-10 col-md-10 col-lg-8 model text-center mt-2 max-width">Shopping Cart:</div>
+              <div className="col-10 col-md-10 col-lg-8 animated fadeIn delay-0.5s max-width">
+                {Object.keys(this.props.cart).map(index => (
+                  <li key={index}>
+                    <div className="border border-dark rounded p-2 mt-3 animated fadeIn delay-0.5s">
+                      <i className="fas fa-times fa-2x float-right" />
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td rowSpan="2">
+                              <img src={this.props.cart[index].item.imgUrl} alt="shoes model" width={120} />
+                            </td>
+                            <td className="px-3">{this.props.cart[index].item.model}</td>
+                            <td>{this.props.cart[index].item.price}</td>
+                          </tr>
+                          <tr>
+                            <td className="px-3">Size: {this.props.cart[index].size}</td>
+                            <td>QTY: {this.props.cart[index].count}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </li>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="row mx-4 my-2 info max-w mx-auto">
-            <div className="col-12 col-lg-8 mt-3 animated fadeIn delay-0.5s">
+          <div className="row mx-4 my-2 marginLg">
+            <div className="col-md-10 col-lg-8 mt-3 animated fadeIn delay-0.5s">
               <span className="total">Total: </span>
               <span className="total float-right">€{this.totalPriceCart(this.props.cart) + this.toDelivery()}</span>
             </div>
-            <div className="col-12 col-lg-8">
+            <div className="col-md-10 col-lg-8">
               <hr />
             </div>
-            <div className="col-12 col-lg-8 animated fadeIn delay-0.5s">
+            <div className="col-md-10 col-lg-8 animated fadeIn delay-0.5s">
               <span className="feature">Items: </span>
               <span className="feature float-right">€{this.totalPriceCart(this.props.cart)}</span>
               {/* {Object.keys(this.props.cart).map(index => (
@@ -66,7 +68,7 @@ class ShoppingCart extends Component {
               </div>
             ))} */}
             </div>
-            <div className="col-12 col-lg-8 pt-2 animated fadeIn delay-0.5s">
+            <div className="col-md-10 col-lg-8 pt-2 animated fadeIn delay-0.5s">
               <span className="feature">Delivery: </span>
               <span className="feature float-right">€10</span>
             </div>

@@ -31,7 +31,7 @@ class ItemInfo extends Component {
       return (
         <React.Fragment>
           <Navigation count={this.props.count} />
-          <div className="container-full top max-w row mx-auto">
+          <div className="container-full row top mx-auto max-width">
             <div id="collection" className="col-12 col-lg-4 order-lg-1 text-center">
               <div className="model text-center">{this.props.item.model}</div>
               <div className="animated fadeIn delay-0.5s text-center">
@@ -43,7 +43,7 @@ class ItemInfo extends Component {
               <DropList setSize={this.setSize.bind(this)} />
               <i className="fas fa-2x fa-cart-plus rounded-circle ml-3 p-3" onClick={this.handleClick.bind(this)} />
             </div>
-            <div className="mt-3 mx-5 info col-12 col-md-10 col-lg-4 order-lg-1 order-lg-2">
+            <div className="mt-3 mx-5 marginLg col-10 col-md-10 col-lg-4 order-lg-1 order-lg-2">
               <div>
                 <p className="feature text-left mb-0">Product information:</p>
               </div>
