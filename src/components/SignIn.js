@@ -16,6 +16,7 @@ class SignIn extends Component {
                 className="w-100 d-block mb-2 pl-3 rounded border-0"
                 type="text"
                 placeholder="Username"
+                autoComplete="username"
                 autoFocus
                 required
               />
@@ -24,6 +25,7 @@ class SignIn extends Component {
                 className="w-100 d-block pl-3 rounded border-0"
                 type="password"
                 placeholder="Password"
+                autoComplete="current-password"
                 required
               />
             </form>

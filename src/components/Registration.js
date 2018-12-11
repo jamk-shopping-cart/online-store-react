@@ -16,6 +16,7 @@ class Registration extends Component {
                 className="w-100 d-block mb-2 pl-3 rounded border-0"
                 type="email"
                 placeholder="Email"
+                autoComplete="username"
                 autoFocus
                 required
               />
@@ -24,6 +25,7 @@ class Registration extends Component {
                 className="w-100 d-block mb-2 pl-3 rounded border-0"
                 type="password"
                 placeholder="Password"
+                autoComplete="new-password"
                 required
               />
               <input
@@ -31,6 +33,7 @@ class Registration extends Component {
                 className="w-100 d-block mb-2 pl-3 rounded border-0"
                 type="password"
                 placeholder="Confirm password"
+                autoComplete="new-password"
                 required
               />
               <input
