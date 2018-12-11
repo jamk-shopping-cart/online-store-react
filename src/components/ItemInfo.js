@@ -41,8 +41,13 @@ class ItemInfo extends Component {
             <div className="col-12 row ml-2">
               <span className="col-1 col-lg-3 model priceMargin">{this.props.item.price}</span>
               <DropList setSize={this.setSize.bind(this)} />
-              <i className="fas fa-2x fa-cart-plus rounded-circle ml-3 p-3 addIcon" onClick={this.handleClick.bind(this)} />
-              <button className="addBtn" onClick={this.handleClick.bind(this)}>Add to cart</button>
+              <i
+                className="fas fa-2x fa-cart-plus rounded-circle ml-3 p-3 addIcon"
+                onClick={this.handleClick.bind(this)}
+              />
+              <button className="addBtn" onClick={this.handleClick.bind(this)}>
+                Add to cart
+              </button>
             </div>
             <div className="mt-3 mx-5 marginLg col-10 col-md-10 col-lg-8">
               <div>
