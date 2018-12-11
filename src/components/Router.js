@@ -79,7 +79,7 @@ const matchPath = (pathname, options) => {
     };
   }
 
-  const match = new RegExp(`^${path}`).exec(pathname);
+  const match = new RegExp(`${path}$`).exec(pathname);
   if (!match) {
     return null;
   }

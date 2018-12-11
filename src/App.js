@@ -67,18 +67,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Route exact path="/" component={StartPage} />
-        <Route exact path="/signin" component={SignIn} />
-        <Route exact path="/registration" component={Registration} count={this.state.count} />
+        <Route path="build/" component={StartPage} />
+        <Route path="/signin" component={SignIn} />
+        <Route path="/registration" component={Registration} count={this.state.count} />
+        <Route path="/collection" component={Collection} callback={this.setItem.bind(this)} count={this.state.count} />
         <Route
-          exact
-          path="/collection"
-          component={Collection}
-          callback={this.setItem.bind(this)}
-          count={this.state.count}
-        />
-        <Route
-          exact
           path="/iteminfo"
           component={ItemInfo}
           item={this.state.item}
@@ -86,7 +79,6 @@ class App extends Component {
           count={this.state.count}
         />
         <Route
-          exact
           path="/cart"
           component={ShoppingCart}
           cart={this.state.cart}
