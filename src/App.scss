@@ -63,7 +63,7 @@ body {
 
    a:hover {
      text-decoration: none;
-     color: #a5641f;
+     color: $darkorange-color;
    }
 
   .subtitle {
@@ -134,7 +134,7 @@ nav {
   }
 
   .fa-shopping-cart:hover ~ .circle {
-    color: #a5641f;
+    color: $darkorange-color;
   }
 
   .fa-shopping-cart,
@@ -147,16 +147,16 @@ nav {
   }
 
   .header:hover {
-    color: #a5641f;
+    color: $darkorange-color;
   }
 
   .fa-user:hover {
-    color: #a5641f;
+    color: $darkorange-color;
   }
 
   a:hover {
     text-decoration: none;
-    color: #a5641f;
+    color: $darkorange-color;
   }
   
   .circle {
